@@ -3,11 +3,14 @@ extends templates/_default
 block title
   title Examkhojo Home Page
 
+block stylesheet
+  link(rel="stylesheet" href="assets/css/pages/index.css")
+
 block content
-  h1.title Examkhojo Ui Development
+  .wrapper.container
+    h1.header-02 Examkhojo Ui Development
 
-  a(href="../library.html") Go to Pattern Library
-  p.description
-    strong Coming soon. Stay Tuned!!
-
-  img.image(src="/assets/images/sample.jpg" alt="")
+    a(href="../library.html") Go to Pattern Library
+    p.description
+      strong Coming soon. Stay Tuned!!
+    img.image(src="/assets/images/logo-main.png" alt="")

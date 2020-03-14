@@ -1,0 +1,221 @@
+/***** Button Styles *****
+
+/** Primary Button
+
+.button-primary
+  display: inline-block
+  background: #006bc2
+  color: #fff
+  font-size: 1.125rem   // or 18px
+  line-height: 100%     // Same as the font-size
+  padding: 16px 32px
+  border-radius: 5px
+  border: none
+  outline: none
+  text-decoration: none
+  cursor: pointer
+  transition: all 100ms ease-in-out
+	
+
+  &:hover 	// Primary Button Hover State
+    background: #104B75
+
+	
+  &:focus // Primary Button Focus State
+    background: #104B75
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #72BEFC  // When Colour of the BG is not white use the color of the BG. Compromise for textured BG, just the general collor the texture
+
+
+
+
+
+/** Outline Button **/
+
+.button-outline
+  display: inline-block
+  background: transparent
+  color: #52535C
+  font-size: 1.125rem   // or 18px
+  line-height: 100%     // Same as the font-size
+  padding: 16px 32px
+  border-radius: 5px
+  border: 2px solid #9597A5
+  outline: none
+  text-decoration: none
+  cursor: pointer
+  transition: all 100ms ease-in-out // Hover Animation
+
+	
+  &:hover /* Outline Button Hover State */
+    color: #006BC2
+    border: 2px solid #006BC2
+
+	
+  &:focus /* Outline Button Focus State */
+    color: #006BC2
+    border: 2px solid #006BC2
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #72BEFC // When Colour of the BG is not white use the color of the BG. Compromise for textured BG, just the general collor the texture
+
+
+
+/** Icon Button - Primary
+
+.icon-button-primary
+  display: inline-block
+  background: #006BC2
+  color: #fff
+  font-size: 1.125rem   // or 18px
+  line-height: 22px     // Same as the font-size
+  padding: 16px 24px
+  border-radius: 5px
+  border: none
+  outline: none
+  text-decoration: none
+  cursor: pointer
+  transition: all 100ms ease-in-out     //Hover Animation
+
+  .icon								// Class must be on svg tag
+    width: 22px         // If inline svg already has height and width this sizing won't work
+    height: 22px
+    margin-right: 16px
+    vertical-align: bottom
+		fill: #fff
+
+	
+  &:hover /* Icon Button Hover State */
+    background: #104B75
+
+
+  &:focus 	/* Icon Button Focus State */
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #72BEFC  // When Colour of the BG is not white use the color of the BG. Compromise for textured BG, just the general collor the texture
+
+
+
+/** Icon Button - Outline*
+
+.icon-button-outline
+  display: inline-block
+  background: transparent
+  color: #52535C
+  font-size: 1.125rem       // or 18px
+  line-height: 22px         // Same as the font-size
+  padding: 16px 24px
+  border-radius: 5px
+  border: 2px solid #9597A5
+  outline: none
+  text-decoration: none
+  cursor: pointer
+  transition: all 100ms ease-in-out     // Hover Animation
+
+  .icon                     // Class must be on svg tag
+    width: 22px             // if inline svg already has height and width this sizing won't work
+    height: 22px
+    margin-right: 16px
+    vertical-align: bottom  // Vertically align it to the text
+    fill: #52535C
+
+	
+  &:hover /* Icon Outline Button Hover State */
+    color: #006BC2
+    border: 2px solid #006BC2
+
+    .icon
+      fill: #006BC2
+
+	
+  &:focus /* Icon Outline Button Focus State */
+    color: #006BC2
+    border: 2px solid #006BC2
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #72BEFC  // When Colour of the BG is not white use the color of the BG. Compromise for textured BG, just the general collor the texture
+
+
+/***Disabled States of All buttons**
+
+// Primary Button Disabled State
+
+.button-primary:disabled
+	background: #E1E1EA
+	color: #9597A5
+	cursor: not-allowed
+
+// Outline Button Disabled State
+
+.button-outline:disabled
+	cursor: not-allowed
+	border: 2px solid #E1E1EA
+	color: #9597A5
+
+// Icon Button Primary Disabled State
+
+.icon-button-primary:disabled
+	cursor: not-allowed
+	background: #E1E1EA
+	color: #9597A5
+	.icon
+    fill: #9597A5
+
+// Icon Button Outline Disabled State
+
+.icon-button-outline:disabled
+	cursor: not-allowed
+	border: 2px solid #E1E1EA
+	color: #9597A5
+	.icon
+    fill: #9597A5
+
+
+/** Responsive Buttons */
+
+/* Small Screen */
+@media only screen and (max-width: 480px)
+  /* Primary Button */
+
+  .button-primary
+    padding: 12px 24px
+    font-size: 1rem
+
+  /* Outline Buttons */
+
+  .button-outline
+    padding: 12px 24px
+    font-size: 1rem
+    border-width: 1.6px
+
+  /* Icon Button Primary */
+
+  .icon-button-primary
+    padding: 12px 16px
+    font-size: 1rem
+
+    .icon
+      margin-right: 8px
+
+  /* Icon Button Outline */
+
+  .icon-button-outline
+    padding: 12px 16px
+    font-size: 1rem
+    border-width: 1.6px
+
+    .icon
+      margin-right: 8px
+
+	
+.button-primary_success
+	@extend .button-primary
+	background-color: $success-green
+	&:hover
+		background-color: darken($success-green, 8%) !important
+	&:focus
+		background-color: darken($success-green, 8%) !important
+		box-shadow: 0 0 0 2px white, 0 0 0 4px darken($success-green, 8%) !important
+		
+.button-primary_danger
+	@extend .button-primary
+	background-color: $danger-red
+	&:hover
+		background-color: darken($danger-red, 8%) !important
+	&:focus
+		background-color: darken($danger-red, 8%) !important
+		box-shadow: 0 0 0 2px white, 0 0 0 4px darken($danger-red, 8%) !important
+

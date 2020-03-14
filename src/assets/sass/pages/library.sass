@@ -1,0 +1,57 @@
+@import '../_includes'
+    
+.header
+    margin: 48px 0
+.typography
+    .typography-title
+        margin: 16px 0
+    .typography-content
+        margin-bottom: 24px
+        .typeface
+            width: 100%
+            max-width: 640px
+            @include flex-parent
+            align-items: flex-start
+            .typeface-content
+                width: 60%
+            @media screen and ( max-width: 768px )
+                flex-direction: column
+                .typeface-content
+                    width: 100%
+                    p
+                        width: 90%
+
+        .text-styles
+            width: 100%
+            max-width: 1080px
+            @include flex-parent
+            flex-direction: column
+            align-items: flex-start
+            margin: 24px 0
+            .text-styles-each
+                width: 100%
+                margin-bottom: 16px
+                @include flex-parent
+                align-items: baseline
+                .text-styles-each_example
+                    flex: 3
+                    text-align: right
+                .text-styles-each_class
+                    flex: 2
+                .text-styles-each_tag
+                    flex: 1
+                .text-styles-each_weight
+                    flex: 1
+.button-styles
+    .button-styles_title
+        margin: 16px 0
+    .button-styles_content
+        margin-bottom: 24px
+        button
+            display: block
+            margin: 16px 0
+.search-boxes
+    .container
+        div
+            margin: 24px 0
+

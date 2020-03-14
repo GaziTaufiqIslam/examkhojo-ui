@@ -45,6 +45,14 @@ const gulp                      = require('gulp'),
 
 gulp.task('clear', () => del([ dist_folder ]));
 
+gulp.task('copy', () => {
+  return gulp.src(src_assets_folder + 'fonts/**/*', {
+    base: './src/assets',
+    since: gulp.lastRun('copy')
+  })
+    .pipe(gulp.dest(dist_assets_folder))
+}); //Added By Gazi
+
 gulp.task('html', () => {
   return gulp.src([ src_folder + '**/*.html' ], {
     base: src_folder,
@@ -60,7 +68,9 @@ gulp.task('pug', () => {
     since: gulp.lastRun('pug')
   })
     .pipe(plumber())
-    .pipe(pug())
+    .pipe(pug({
+      pretty: true
+    }))
     .pipe(gulp.dest(dist_folder))
     .pipe(browserSync.stream());
 });
@@ -145,7 +155,7 @@ gulp.task('vendor', () => {
     .pipe(browserSync.stream());
 });
 
-gulp.task('build', gulp.series('clear', 'html', 'pug', 'sass', 'less', 'stylus', 'js', 'images', 'vendor'));
+gulp.task('build', gulp.series('clear', 'copy','html', 'pug', 'sass', 'less', 'stylus', 'js', 'images', 'vendor'));
 
 gulp.task('dev', gulp.series('html', 'pug', 'sass', 'less', 'stylus', 'js'));
 
