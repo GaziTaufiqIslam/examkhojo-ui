@@ -1,0 +1,226 @@
+nav
+    width: 100%
+    height: 80px
+    background-color: $white-01
+    position: fixed
+    top: 0
+    @include transition(300ms)
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1)
+    z-index: 99
+    .nav-content
+        height: inherit
+        max-width: 1600px
+        width: 90%
+        margin: 0 auto
+        @include flex-parent
+        .nav-content-brand
+            height: 40px
+            width: 230px
+            background: url("../../images/logo-main.png") no-repeat
+            background-size: contain
+            @media screen and ( max-width: 480px )
+                height: 22px
+                width: 128px                
+        .nav-content-links
+            @include flex-parent
+            justify-content: flex-end
+            width: 100%
+            .hamburger-menu
+                padding: 4px
+                cursor: pointer
+                display: none
+                .icon
+                    @include size(32px)
+                @media screen and ( max-width:  1200px)
+                    display: block
+            .hamburger-content
+                @include flex-parent
+                justify-content: flex-end
+                width: 100%
+                .hamburger-content-header
+                    display: none
+                ul
+                    @include flex-parent
+                    list-style-type: none
+                    .link-items
+                        a
+                            padding: 12px 24px
+                            color: $grey-04
+                            @include transition(100ms)
+                            &:hover
+                                color: transparentize($grey-04, 0.3)
+                            @media screen and ( max-width:  1400px)
+                                padding: 12px 8px
+                .nav-content-links__right-buttons
+                    @include flex-parent
+                    button
+                        margin: 0 24px
+                        @media screen and ( max-width:  1400px)
+                            margin: 0 8px
+                        &:last-child
+                            margin-right: 0
+                @media screen and ( max-width:  1200px)
+                    @include flex-parent
+                    align-items: flex-start
+                    justify-content: flex-start
+                    flex-direction: column
+                    background: $white-01   
+                    height: 100vh                 
+                    width: 80%
+                    max-width: 400px
+                    position: fixed
+                    top: 0
+                    right: -400px
+                    padding: 32px 24px
+                    z-index: 999
+                    @include transition(300ms)
+                    .hamburger-content-header
+                        @include flex-parent
+                        width: 100%
+                        margin-bottom: 64px
+                    .toggle-menu
+                        cursor: pointer
+                        .icon
+                            @include size(32px)
+                            fill: $grey-03
+                    .hamburger-content-header__brand
+                        img
+                            height: 22px
+                    ul
+                        @include flex-parent
+                        flex-direction: column
+                        align-items: flex-start
+                        list-style-type: none
+                        .link-items
+                            margin: 8px 0
+                            a
+                                padding: 12px
+                                padding-left: 0
+                                color: $grey-04
+                                @include transition(100ms)
+                                &:hover
+                                    color: transparentize($grey-04, 0.3)
+                    .nav-content-links__right-buttons
+                        @include flex-parent
+                        align-items: flex-start
+                        flex-direction: column
+                        button
+                            margin: 16px 0 12px 0
+                            &:last-child
+                                margin-right: 0
+                    
+            .overlay
+                background: rgba(0,0,0,0.5)
+                position: fixed
+                top: 0
+                right: 0
+                bottom: 0
+                left: 0
+                display: none
+                
+            .hamburger-content-show
+                right: 0
+
+    .nav-content-links__user
+        display: none
+.logged-in
+    .nav-content-brand
+        height: 16px
+        width: 100px
+    .nav-content-links__user
+        display: flex
+        margin: 0 16px 0 0
+    .nav-content-links__right-buttons
+        display: none !important
+.above-the-fold
+    height: 100px
+    background-color: transparent
+    position: absolute
+    top: 0
+    box-shadow: none
+    @include transition(300ms)
+    .nav-content
+        .nav-content-brand  
+            background: url("../../images/logo-white.png") no-repeat
+            background-size: contain
+        .nav-content-links
+            .hamburger-free-content
+                ul
+                    .link-items
+                        a
+                            color: $white-01
+                            &:hover
+                                color: transparentize($white-01, 0.3)
+                .nav-content-links__right-buttons
+                    @include flex-parent
+                    button
+                        &:first-child
+                            color: $white-01
+                            border-color: $grey-01
+                            &:hover
+                                color: $blue-01
+                                border-color: $blue-01
+                            &:focus
+                                color: $blue-01
+                                border-color: $blue-01
+                                box-shadow: 0 0 0 2px $grey-01
+                        &:last-child
+                            &:focus
+                                box-shadow: 0 0 0 2px $grey-02
+            .nav-content-links__user
+                span
+                    color: $white-01
+                .icon
+                    fill: $white-01
+.nav-content-links__user
+    @include flex-parent
+    margin: 0 24px
+    position: relative //for the dropdown position
+    height: 80px //for the dropdown position
+    @media screen and ( max-width: 1400px )
+        margin: 0 16px    
+    .user-avatar
+        @include size(34px)
+        border-radius: 50%
+        margin-right: 8px
+    span
+        color: $grey-04
+    .icon
+        @include size(24px)
+        padding-left: 8px
+        fill: $grey-03
+        cursor: pointer
+    .user-dropdown
+        position: absolute
+        top: 80px
+        right: 0
+        background: $white-02
+        padding: 20px 24px
+        display: none
+        li
+            list-style-type: none
+            a
+                display: inline-block
+                padding: 12px 24px 12px 0
+                cursor: pointer
+                color: $grey-04
+                @include transition(100ms)
+                &:hover
+                    color: $blue-01
+            &:last-child
+                a
+                    color: $blue-02
+                    &:hover
+                        color: $blue-01
+    .visible
+        display: block
+.overlay
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: transparentize(black, 0.5)               
+
+
+
