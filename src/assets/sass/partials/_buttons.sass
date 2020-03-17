@@ -225,14 +225,27 @@
   color: $blue-02
   &:hover
     color:  $blue-03
-.link-primary__lined
+.link-primary_lined
   @extend .link-primary
   position: relative
-  &:after
+  line-height: 22px //for including the underline inside the border box
+  &::after
     content: ''
     position: absolute
     width: 100%
-    height: 2px
+    height: 1px
     background-color: $blue-01
     top: 19px
     left: 0
+//icon link
+.icon-link
+  @include flex-parent
+  background: transparent
+  .link-primary_lined
+    &::after
+      top: 21px
+  .icon
+    fill: $blue-02
+    @include size(18px)
+    margin-right: 4px
+    margin-top: auto
