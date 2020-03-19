@@ -1,6 +1,47 @@
 @import '../_includes'
 
-body
-  background-color: $white-01
+#hero
+  background: url(../../images/bg-dark.png) no-repeat center
   .container
-    padding-top: 100px
+    padding: 10vh 0 20vh
+    display: flex
+    flex-direction: column
+  h2
+    max-width: 960px
+    text-align: center
+    margin: 0 auto 32px
+    color: $white-01
+  .search-bar_large
+    margin: 0 auto
+
+#counselling
+  padding: 120px 0
+  .container
+    display: grid
+    grid-template-columns: 6fr 5fr
+    grid-column-gap: 8%
+  .counselling-header
+    display: flex
+    margin: auto 0
+  .counselling-content
+    p
+      margin: 24px 0 32px
+
+.featured-section
+  padding: 80px 0
+  .featured-section-header, 
+    display: grid
+    grid-template-columns: 6fr 3fr
+    grid-column-gap: 25%
+    align-items: end
+    justify-content: stretch
+    .featured-section-header-content
+      p
+        margin: 24px 0 0
+
+#featured-colleges, #featured-exams, #featured-courses
+  @extend .featured-section
+#featured-exams, #featured-courses
+  background: $white-02
+
+    

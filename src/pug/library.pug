@@ -111,87 +111,18 @@ block content
 		.container
 			h3 Card Styles
 			.cards-group
-				.card_college
-					.card_college-img
-						img(src="../assets/images/sample.jpg", alt="College Logo")
-					.card_college-details
-						h5.sub-header-02 Name of the College
-						.card_college-details_secondary
-							span.label-01 Location
-							span.label-01 Approval
-							span.label-01 Type
-						a(href="#download").link-primary_lined Brochure
-				.card_college
-					.card_college-img
-						img(src="../assets/images/sample.jpg", alt="College Logo")
-					.card_college-details
-						h5.sub-header-02 Name of the College
-						.card_college-details_secondary
-							span.label-01 Location
-							span.label-01 Approval
-							span.label-01 Type
-						a(href="#download").link-primary_lined Brochure
-				.card_college
-					.card_college-img
-						img(src="../assets/images/sample.jpg", alt="College Logo")
-					.card_college-details
-						h5.sub-header-02 Name of the College
-						.card_college-details_secondary
-							span.label-01 Location
-							span.label-01 Approval
-							span.label-01 Type
-						a(href="#download").link-primary_lined Brochure
-				.card_exam
-					.card_exam-img
-						img(src="../assets/images/bg-dark - Copy.png", alt="College Logo")
-					.card_exam-details
-						h5.sub-header-02 Exam Name
-						.card_exam-details_secondary
-							span.label-01 Conducting Body
-							span.label-01 Level
-							span.label-01 For Course
-						a(href="#download").link-primary_lined Brochure
-				.card_exam
-					.card_exam-img
-						img(src="../assets/images/bg-dark - Copy.png", alt="College Logo")
-					.card_exam-details
-						h5.sub-header-02 Exam Name
-						.card_exam-details_secondary
-							span.label-01 Conducting Body
-							span.label-01 Level
-							span.label-01 For Course
-						a(href="#download").link-primary_lined Brochure
-				.card_exam
-					.card_exam-img
-						img(src="../assets/images/bg-dark - Copy.png", alt="College Logo")
-					.card_exam-details
-						h5.sub-header-02 Exam Name
-						.card_exam-details_secondary
-							span.label-01 Conducting Body
-							span.label-01 Level
-							span.label-01 For Course
-						a(href="#download").link-primary_lined Brochure
-				.card_course
-					.card_course-details
-						h5.sub-header-02 Name of the Course
-						.card_course-details_secondary
-							span.label-01 Conducting Body
-							span.label-01 Level
-							span.label-01 For Course
-				.card_course
-					.card_course-details
-						h5.sub-header-02 Name of the Course
-						.card_course-details_secondary
-							span.label-01 Conducting Body
-							span.label-01 Level
-							span.label-01 For Course
-				.card_course
-					.card_course-details
-						h5.sub-header-02 Name of the Course
-						.card_course-details_secondary
-							span.label-01 Conducting Body
-							span.label-01 Level
-							span.label-01 For Course
+				+cardCollege( "#individualPage", "../assets/images/sample.jpg", "IIT Bomabay", "Bombay", "AICTE", "University", "#downloadIITBombay")
+				+cardCollege( "#individualPage", "../assets/images/sample.jpg", "IIT Bomabay", "Bombay", "AICTE", "University", "#downloadIITBombay")
+				+cardCollege( "#individualPage", "../assets/images/sample.jpg", "IIT Bomabay", "Bombay", "AICTE", "University", "#downloadIITBombay")
+
+				+cardExam( "#individualPage", "JEE Mains","IIT Council","UG Entrance","B.Tech & B.Arch", "#download")
+				+cardExam( "#individualPage", "CEED","IIT Bombay","PG","M.Des.", "#downloadCEED")
+				+cardExam( "#individualPage", "CEED","IIT Bombay","PG","M.Des.", "#downloadCEED")
+				
+				+cardCourse( "#individualPage", "B.Tech - CSE", "Engineering", "Undergraduate", "4years" )
+				+cardCourse( "#individualPage", "B.Tech - CSE", "Engineering", "Undergraduate", "4years" )
+				+cardCourse( "#individualPage", "B.Tech - CSE", "Engineering", "Undergraduate", "4years" )
+
 			//End of Cards wrapper group
 	//End of Cards Section
 	section.footer-section

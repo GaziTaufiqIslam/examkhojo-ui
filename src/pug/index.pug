@@ -9,24 +9,78 @@ block stylesheet
 block content
   .wrapper
     include templates/partials/_nav
-    .section#hero
-      h2.header-02 Find the best colleges, exams and courses in India
-      
-    .container
-      h1.header-02 Examkhojo Ui Development
+    section#hero
+      .container
+        h2.header-02 Find the best colleges, exams and courses in India
+        +searchBarLG("Search Exams, Colleges, Courses and more")
+    //End Hero Section
 
-      a(href="../library.html") Go to Pattern Library
-      p.description
-        strong Coming soon. Stay Tuned!!
-      img.image(src="/assets/images/logo-main.png" alt="")
-      img.image(src="/assets/images/logo-main.png" alt="")
-      img.image(src="/assets/images/logo-main.png" alt="")
-      img.image(src="/assets/images/logo-main.png" alt="")
-      img.image(src="/assets/images/logo-main.png" alt="")
-      img.image(src="/assets/images/logo-main.png" alt="")
-      img.image(src="/assets/images/logo-main.png" alt="")
-      img.image(src="/assets/images/logo-main.png" alt="")
-      img.image(src="/assets/images/logo-main.png" alt="")
-      img.image(src="/assets/images/logo-main.png" alt="")
-      img.image(src="/assets/images/logo-main.png" alt="")
-      img.image(src="/assets/images/logo-main.png" alt="")
+    section#counselling
+      .container
+        .counselling-header
+          h2.header-02 Having Problems Deciding What to do?
+        .counselling-content
+          h4.sub-header-01 Get Expert Counselling
+          p.
+            We ease your biggest doubts with personalized
+            counselling from our curated experts.
+          button.button-primary Get Couselling
+    //End of Counselling Section
+
+    section#featured-exams
+      .container
+        .featured-section-header
+          .featured-section-header-content
+            h4.sub-header-01 Top Featured Exams
+            p.
+              Lorem Ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore
+              et dolore magna aliqua.
+          +searchBarSM("Search Exams").featured-section-header-search-bar
+        .featured-section-cards
+          .cards-group
+            +cardExam( "#IndividualPage" , "JEE Mains", "IIT Bombay", "UG", "B.Tech & B.Arch", "#download")
+            +cardExam( "#IndividualPage" , "CEED", "IIT Delhi", "PG", "M.Des", "#download")
+            +cardExam( "#IndividualPage" , "GATE", "IIT Delhi", "PG", "M.Tech", "#download")
+            +cardExam( "#IndividualPage" , "JEE Mains", "IIT Bombay", "UG", "B.Tech & B.Arch", "#download")
+            +cardExam( "#IndividualPage" , "CEED", "IIT Delhi", "PG", "M.Des", "#download")
+            +cardExam( "#IndividualPage" , "GATE", "IIT Delhi", "PG", "M.Tech", "#download")
+    //End of Featured Exams Section
+    section#featured-colleges
+      .container
+        .featured-section-header
+          .featured-section-header-content
+            h4.sub-header-01 Top Featured Colleges
+            p.
+              Lorem Ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore
+              et dolore magna aliqua.
+          +searchBarSM("Search Colleges").featured-section-header-search-bar
+        .featured-section-cards
+          .cards-group
+            +cardCollege( "#IndividualPage", "../assets/images/sample.jpg", "IIT Delhi", "Delhi", "AICTE", "University", "#download" )
+            +cardCollege( "#IndividualPage" , "../assets/images/sample.jpg", "IEM Saltlake", "Kolkata", "AICTE", "College", "#download" )
+            +cardCollege( "#IndividualPage" , "../assets/images/sample.jpg", "Amity University", "Kolkata", "UGC", "University", "#download")
+            +cardCollege( "#IndividualPage", "../assets/images/sample.jpg", "IIT Delhi", "Delhi", "AICTE", "University", "#download" )
+            +cardCollege( "#IndividualPage" , "../assets/images/sample.jpg", "IEM Saltlake", "Kolkata", "AICTE", "College", "#download" )
+            +cardCollege( "#IndividualPage" , "../assets/images/sample.jpg", "Amity University", "Kolkata", "UGC", "University", "#download")
+    //End of Featured Colleges Section        
+    section#featured-courses
+      .container
+        .featured-section-header
+          .featured-section-header-content
+            h4.sub-header-01 Top Featured Colleges
+            p.
+              Lorem Ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore
+              et dolore magna aliqua.
+          +searchBarSM("Search Colleges").featured-section-header-search-bar
+        .featured-section-cards
+          .cards-group
+            +cardCourse( "#individualPage", "B.Tech - CSE", "Engineering", "Undergraduate", "4years" )
+            +cardCourse( "#individualPage", "B.Des - Interaction Design", "Design", "Undergraduate", "4years" )
+            +cardCourse( "#individualPage", "BCA", "Computer", "Undergraduate", "3years" )
+            +cardCourse( "#individualPage", "B.Des - Interaction Design", "Design", "Undergraduate", "4years" )
+            +cardCourse( "#individualPage", "B.Tech - CSE", "Engineering", "Undergraduate", "4years" )
+            +cardCourse( "#individualPage", "MBA", "Business", "Postgraduate", "2years" )
+    //End of Featured Courses Section

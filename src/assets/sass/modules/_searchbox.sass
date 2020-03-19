@@ -12,22 +12,25 @@
     padding: 32px 48px
     @include flex-parent
     justify-content: flex-start
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25)
+    box-shadow: 0px 8px 16px -4px rgba(0, 0, 0, 0.25)
     .icon
         @include size(36px)
         margin-right: 36px
+    &:hover
+        box-shadow: 0px 8px 16px 8px rgba(0, 0, 0, 0.3)
+
 .search-bar_small
     @extend .search-bar
-    width: 80%
-    max-width: 400px
     padding: 16px 32px
     @include flex-parent
     justify-content: flex-start
     border: 2px solid $grey-02
-    box-shadow: 0px 4px 16px rgba(13, 14, 21, 0.06)
+    box-shadow: 0px 4px 16px -2px rgba(13, 14, 21, 0.06)
     .icon
         @include size(24px)
         margin-right: 16px
+    &:hover
+        box-shadow: 0px 4px 16px 4px rgba(13, 14, 21, 0.1)
 
 @media only screen and (max-width: 768px)
     .search-bar_large
@@ -36,6 +39,8 @@
             @include size(20px)
             margin-right: 12px
     .search-bar_small
+        width: 80%
+        max-width: 400px
         padding: 12px 24px
         .icon
             @include size(18px)
