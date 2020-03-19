@@ -3,11 +3,10 @@
 /** Primary Button
 
 .button-primary
+  @extend .button-01
+  color: $white-01
   display: inline-block
   background: #006bc2
-  color: #fff
-  font-size: 1.125rem   // or 18px
-  line-height: 100%     // Same as the font-size
   padding: 16px 32px
   border-radius: 5px
   border: none
@@ -32,11 +31,10 @@
 /** Outline Button **/
 
 .button-outline
+  @extend .button-01
   display: inline-block
   background: transparent
   color: #52535C
-  font-size: 1.125rem   // or 18px
-  line-height: 100%     // Same as the font-size
   padding: 16px 32px
   border-radius: 5px
   border: 2px solid #9597A5
@@ -61,11 +59,10 @@
 /** Icon Button - Primary
 
 .icon-button-primary
+  @extend .button-01
   display: inline-block
   background: #006BC2
   color: #fff
-  font-size: 1.125rem   // or 18px
-  line-height: 22px     // Same as the font-size
   padding: 16px 24px
   border-radius: 5px
   border: none
@@ -94,11 +91,10 @@
 /** Icon Button - Outline*
 
 .icon-button-outline
+  @extend .button-01
   display: inline-block
   background: transparent
   color: #52535C
-  font-size: 1.125rem       // or 18px
-  line-height: 22px         // Same as the font-size
   padding: 16px 24px
   border-radius: 5px
   border: 2px solid #9597A5
@@ -237,6 +233,8 @@
     background-color: $blue-01
     top: 19px
     left: 0
+  &:hover::after
+    background: $blue-03
 //icon link
 .icon-link
   @include flex-parent

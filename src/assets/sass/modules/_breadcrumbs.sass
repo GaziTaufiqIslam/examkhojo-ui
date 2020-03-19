@@ -1,0 +1,14 @@
+.breadcrumb
+    li
+        color: $grey-03
+        display: inline-block
+        a
+            color: $grey-02
+            &:hover
+                color: $grey-01
+    li+li
+        &::before
+            color: $grey-03
+            padding: 4px
+            content: "\25B8"
+    

@@ -7,6 +7,7 @@ block stylesheet
 	link(rel="stylesheet" href="assets/css/pages/library.css")
 
 block content
+	include templates/partials/_nav
 	.header
 		.container
 			h2.header-02 Pattern Library
@@ -108,6 +109,7 @@ block content
 	//Nav Bar Section End
 	section.cards-section
 		.container
+			h3 Card Styles
 			.cards-group
 				.card_college
 					.card_college-img
@@ -118,7 +120,7 @@ block content
 							span.label-01 Location
 							span.label-01 Approval
 							span.label-01 Type
-						a(href="#download").link-primary__lined Brochure
+						a(href="#download").link-primary_lined Brochure
 				.card_college
 					.card_college-img
 						img(src="../assets/images/sample.jpg", alt="College Logo")
@@ -128,7 +130,7 @@ block content
 							span.label-01 Location
 							span.label-01 Approval
 							span.label-01 Type
-						a(href="#download").link-primary__lined Brochure
+						a(href="#download").link-primary_lined Brochure
 				.card_college
 					.card_college-img
 						img(src="../assets/images/sample.jpg", alt="College Logo")
@@ -138,7 +140,7 @@ block content
 							span.label-01 Location
 							span.label-01 Approval
 							span.label-01 Type
-						a(href="#download").link-primary__lined Brochure
+						a(href="#download").link-primary_lined Brochure
 				.card_exam
 					.card_exam-img
 						img(src="../assets/images/bg-dark - Copy.png", alt="College Logo")
@@ -148,7 +150,7 @@ block content
 							span.label-01 Conducting Body
 							span.label-01 Level
 							span.label-01 For Course
-						a(href="#download").link-primary__lined Brochure
+						a(href="#download").link-primary_lined Brochure
 				.card_exam
 					.card_exam-img
 						img(src="../assets/images/bg-dark - Copy.png", alt="College Logo")
@@ -158,7 +160,7 @@ block content
 							span.label-01 Conducting Body
 							span.label-01 Level
 							span.label-01 For Course
-						a(href="#download").link-primary__lined Brochure
+						a(href="#download").link-primary_lined Brochure
 				.card_exam
 					.card_exam-img
 						img(src="../assets/images/bg-dark - Copy.png", alt="College Logo")
@@ -168,7 +170,7 @@ block content
 							span.label-01 Conducting Body
 							span.label-01 Level
 							span.label-01 For Course
-						a(href="#download").link-primary__lined Brochure
+						a(href="#download").link-primary_lined Brochure
 				.card_course
 					.card_course-details
 						h5.sub-header-02 Name of the Course
@@ -190,4 +192,31 @@ block content
 							span.label-01 Conducting Body
 							span.label-01 Level
 							span.label-01 For Course
+			//End of Cards wrapper group
+	//End of Cards Section
+	section.footer-section
+		.container
+			h3 Footer Styles
+			include templates/partials/_foot
+			//End of Footer
+	//End of Footer Styles Sections
+	section.breadcrumb-styles
+		.container
+			ul.breadcrumb
+				li.link-01
+					a(href="index.html") Home
+				li.link-01
+					a(href="#") Category
+				li.link-01
+					a(href="#") Sub Category
+				li.link-01 Current Page
+	//End of Breadcrumb Styles
+	section.subscribe-cta-styles
+		.container
+			h3 Input Style
+			input(type="text" placeholder="Placeholder Text")
+			h4 With Lable
+			label.label-02(for="name") Name
+			input(type="text" placeholder="Placeholder Text")
+		include templates/partials/_sub
 	img(src="../assets/images/bg-dark.png", alt="")
