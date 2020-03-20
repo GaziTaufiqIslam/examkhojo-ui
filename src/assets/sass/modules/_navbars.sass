@@ -33,6 +33,7 @@ nav
                 display: none
                 .icon
                     @include size(32px)
+                    fill: $grey-03
                 @media screen and ( max-width:  1200px)
                     display: block
             .hamburger-content
@@ -74,7 +75,7 @@ nav
                     top: 0
                     right: -400px
                     padding: 32px 8%
-                    z-index: 999
+                    z-index: 100
                     @include transition(300ms)
                     .hamburger-content-header
                         @include flex-parent
@@ -153,12 +154,16 @@ nav
                             color: $white-01
                             &:hover
                                 color: transparentize($white-01, 0.3)
+                            @media screen and ( max-width: 1200px )
+                                color: $grey-04
                 .nav-content-links__right-buttons
-                    @include flex-parent
                     button
                         &:first-child
                             color: $white-01
                             border-color: $grey-01
+                            @media screen and ( max-width: 1200px )
+                                color: $grey-04
+                                border-color: $grey-03
                             &:hover
                                 color: $blue-01
                                 border-color: $blue-01
@@ -174,6 +179,9 @@ nav
                     color: $white-01
                 .icon
                     fill: $white-01
+            .hamburger-menu
+                .icon
+                    fill: $white-02
 .nav-content-links__user
     @include flex-parent
     margin: 0 24px

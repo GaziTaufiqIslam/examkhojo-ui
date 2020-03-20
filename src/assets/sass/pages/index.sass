@@ -3,7 +3,7 @@
 #hero
   background: url(../../images/bg-dark.png) no-repeat center
   .container
-    padding: 10vh 0 20vh
+    padding: 10vmax 0 16vmax
     display: flex
     flex-direction: column
   h2
@@ -12,14 +12,26 @@
     margin: 0 auto 32px
     color: $white-01
   .search-bar_large
+    width: 100%
     margin: 0 auto
+    @media screen and ( max-width: 1000px )
+      display: none
+    &:last-child
+      display: none
+      @media screen and ( max-width: 1000px )
+        display: flex
 
 #counselling
-  padding: 120px 0
+  padding: 10vmax 0 12vmax
   .container
     display: grid
     grid-template-columns: 6fr 5fr
     grid-column-gap: 8%
+    @media screen and ( max-width: 1200px )
+      grid-column-gap: 2%
+    @media screen and ( max-width: 800px )
+      grid-template-columns: 1fr
+      grid-row-gap: 24px
   .counselling-header
     display: flex
     margin: auto 0
@@ -28,13 +40,17 @@
       margin: 24px 0 32px
 
 .featured-section
-  padding: 80px 0
-  .featured-section-header, 
+  padding: 12vmin 0
+  .featured-section-header
     display: grid
     grid-template-columns: 6fr 3fr
     grid-column-gap: 25%
     align-items: end
     justify-content: stretch
+    @media screen and ( max-width: 1200px )
+      grid-template-columns: 1fr
+      grid-row-gap: 16px
+      justify-content: start
     .featured-section-header-content
       p
         margin: 24px 0 0

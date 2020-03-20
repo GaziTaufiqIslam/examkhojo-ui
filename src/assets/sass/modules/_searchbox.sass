@@ -22,6 +22,7 @@
 .search-bar_small
     @extend .search-bar
     padding: 16px 32px
+    max-width: 400px
     @include flex-parent
     justify-content: flex-start
     border: 2px solid $grey-02
@@ -40,7 +41,6 @@
             margin-right: 12px
     .search-bar_small
         width: 80%
-        max-width: 400px
         padding: 12px 24px
         .icon
             @include size(18px)
