@@ -77,7 +77,7 @@ overlay.addEventListener("click", MenuContentHide);
 
 // Toggling Search Modal
 var searchBox = document.querySelectorAll(".search-bar_large, .search-bar_small");
-var closeModal = document.querySelector(".close-modal");
+var closeSearchModal = document.querySelector(".close-search-modal");
 var searchModal = document.querySelector(".search-modal");
 
 var modalInput = document.querySelectorAll(".modal-input")
@@ -96,14 +96,14 @@ Object.entries(searchBox).map((object) => {
     // alert(" Search Box Clicked");
     searchModal.style.display = "block";
     Object.entries(modalInput).map((object) => {
-      object[1].focus();
+      // object[1].focus();
     });
     
   }
   
 });
 
-closeModal.onclick = function() {
+closeSearchModal.onclick = function() {
   searchModal.style.display = "none";
   
   Object.entries(li).map((object) => {
@@ -148,4 +148,86 @@ Object.entries(modalInput).map((object) => {
 });
 
 
+// Register Modals
+var signUpButton = document.querySelectorAll("#signUpButton");
+var logInButton = document.querySelectorAll("#logInButton");
+var registerModal = document.querySelector(".register-modal");
+var logInModal = registerModal.querySelector(".register-modal_login");
+var signUpModal = registerModal.querySelector(".register-modal_signup");
 
+var modalOverlay = document.querySelector(".modal-overlay");
+var closeRegisterModal = document.querySelectorAll(".close-register-modal");
+
+Object.entries(logInButton).map((object) => {
+  object[1].onclick = function() {
+    // alert("Log In Clicked");
+    registerModal.style.display= "block";
+    signUpModal.style.display= "none";
+    logInModal.style.display= "grid";
+
+  };
+});
+
+Object.entries(signUpButton).map((object) => {
+  object[1].onclick = function() {
+    // alert("Sign Up Clicked");
+    registerModal.style.display= "block";
+    logInModal.style.display= "none";
+    signUpModal.style.display= "grid";
+    
+  };
+});
+
+Object.entries(closeRegisterModal).map((object) => {
+  object[1].onclick = function() {
+    // alert("Sign Up Clicked");
+    registerModal.style.display= "none";
+
+  };
+});
+
+window.onclick = function(event) {
+  if(event.target == registerModal)
+  registerModal.style.display = "none";
+};
+
+
+//Password Visisbility
+var eyeIconHide = document.querySelectorAll("#pwd-hide");
+var eyeIconShow = document.querySelectorAll("#pwd-show");
+var passwordInput = document.querySelectorAll('input[type="password"]');
+
+Object.entries(eyeIconHide).map((object) => {
+  object[1].onclick = function() {
+    object[1].style.display = "none";
+
+    Object.entries(passwordInput).map((object) => {
+      if (object[1].type === "password") {
+        object[1].type = "text";
+      } else {
+        object[1].type = "password";
+      }
+    });
+
+    Object.entries(eyeIconShow).map((object) => {
+      object[1].style.display = "block";
+    });
+  };
+});
+
+Object.entries(eyeIconShow).map((object) => {
+  object[1].onclick = function() {
+    object[1].style.display = "none";
+
+    Object.entries(passwordInput).map((object) => {
+      if (object[1].type === "password") {
+        object[1].type = "text";
+      } else {
+        object[1].type = "password";
+      }
+    });
+    Object.entries(eyeIconHide).map((object) => {
+      object[1].style.display = "block";
+    });
+  };
+});

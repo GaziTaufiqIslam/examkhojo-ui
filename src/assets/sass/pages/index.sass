@@ -1,7 +1,8 @@
 @import '../_includes'
 
 #hero
-  background: url(../../images/bg-dark.png) no-repeat center
+  background: url("../../images/bg-dark.png") no-repeat center
+    size: cover
   .container
     padding: 10vmax 0 16vmax
     display: flex
@@ -47,6 +48,8 @@
     grid-column-gap: 25%
     align-items: end
     justify-content: stretch
+    @media screen and ( max-width: 1400px )
+      grid-column-gap: 12.5%
     @media screen and ( max-width: 1200px )
       grid-template-columns: 1fr
       grid-row-gap: 16px
