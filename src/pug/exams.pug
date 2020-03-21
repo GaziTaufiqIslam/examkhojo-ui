@@ -1,0 +1,33 @@
+extends templates/_default
+
+block title
+	title Exams | Examkhojo | Find the best colleges, exams and courses in India
+
+block stylesheet
+	link(rel="stylesheet" href="assets/css/pages/listpages.css")
+
+block content
+	section#hero
+		.container
+			ul.breadcrumb
+				li.link-01
+					a(href="index.html") Home
+				li.link-01 Exams
+			h3.header-03 Browse Popular Exams
+			+searchBarSM("Search Exams")
+	section#cards-section
+		.container
+			.cards-group
+				+cardExam( "#IndividualPage" , "JEE Mains", "IIT Bombay", "UG", "B.Tech & B.Arch", "#download")
+				+cardExam( "#IndividualPage" , "CEED", "IIT Delhi", "PG", "M.Des", "#download")
+				+cardExam( "#IndividualPage" , "GATE", "IIT Delhi", "PG", "M.Tech", "#download")
+				+cardExam( "#IndividualPage" , "JEE Mains", "IIT Bombay", "UG", "B.Tech & B.Arch", "#download")
+				+cardExam( "#IndividualPage" , "CEED", "IIT Delhi", "PG", "M.Des", "#download")
+				+cardExam( "#IndividualPage" , "GATE", "IIT Delhi", "PG", "M.Tech", "#download")
+				+cardExam( "#IndividualPage" , "JEE Mains", "IIT Bombay", "UG", "B.Tech & B.Arch", "#download")
+				+cardExam( "#IndividualPage" , "CEED", "IIT Delhi", "PG", "M.Des", "#download")
+				+cardExam( "#IndividualPage" , "GATE", "IIT Delhi", "PG", "M.Tech", "#download")
+				+cardExam( "#IndividualPage" , "JEE Mains", "IIT Bombay", "UG", "B.Tech & B.Arch", "#download")
+				+cardExam( "#IndividualPage" , "CEED", "IIT Delhi", "PG", "M.Des", "#download")
+				+cardExam( "#IndividualPage" , "GATE", "IIT Delhi", "PG", "M.Tech", "#download")
+			button.button-outline.load-more Load More

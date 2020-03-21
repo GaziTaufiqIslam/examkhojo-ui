@@ -1,0 +1,30 @@
+extends templates/_default
+
+block title
+	title Colleges | Examkhojo | Find the best colleges, exams and courses in India
+
+block stylesheet
+	link(rel="stylesheet" href="assets/css/pages/listpages.css")
+
+block content
+	section#hero
+		.container
+			ul.breadcrumb
+				li.link-01
+					a(href="index.html") Home
+				li.link-01 Colleges
+			h3.header-03 Check Out the Top Colleges
+			+searchBarSM("Search Colleges")
+	section#cards-section
+		.container
+			.cards-group
+				+cardCollege( "#individualPage", "../assets/images/sample.jpg", "IIT Bomabay", "Bombay", "AICTE", "University", "#downloadIITBombay")
+				+cardCollege( "#individualPage", "../assets/images/sample.jpg", "IIT Bomabay", "Bombay", "AICTE", "University", "#downloadIITBombay")
+				+cardCollege( "#individualPage", "../assets/images/sample.jpg", "IIT Bomabay", "Bombay", "AICTE", "University", "#downloadIITBombay")
+				+cardCollege( "#individualPage", "../assets/images/sample.jpg", "IIT Bomabay", "Bombay", "AICTE", "University", "#downloadIITBombay")
+				+cardCollege( "#individualPage", "../assets/images/sample.jpg", "IIT Bomabay", "Bombay", "AICTE", "University", "#downloadIITBombay")
+				+cardCollege( "#individualPage", "../assets/images/sample.jpg", "IIT Bomabay", "Bombay", "AICTE", "University", "#downloadIITBombay")
+				+cardCollege( "#individualPage", "../assets/images/sample.jpg", "IIT Bomabay", "Bombay", "AICTE", "University", "#downloadIITBombay")
+				+cardCollege( "#individualPage", "../assets/images/sample.jpg", "IIT Bomabay", "Bombay", "AICTE", "University", "#downloadIITBombay")
+				+cardCollege( "#individualPage", "../assets/images/sample.jpg", "IIT Bomabay", "Bombay", "AICTE", "University", "#downloadIITBombay")
+			button.button-outline.load-more Load More

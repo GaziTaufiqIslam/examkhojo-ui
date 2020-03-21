@@ -5,7 +5,9 @@ include partials/_head
 body
   include partials/_registermodal
   include partials/_searchmodal
-  block content
+  .wrapper
+    include partials/_nav
+    block content
 
   include partials/_sub
   include partials/_foot
