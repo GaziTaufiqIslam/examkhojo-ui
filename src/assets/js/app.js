@@ -96,7 +96,7 @@ Object.entries(searchBox).map((object) => {
     // alert(" Search Box Clicked");
     searchModal.style.display = "block";
     Object.entries(modalInput).map((object) => {
-      // object[1].focus();
+      object[1].focus();
     });
     
   }
@@ -230,4 +230,44 @@ Object.entries(eyeIconShow).map((object) => {
       object[1].style.display = "block";
     });
   };
+});
+
+
+// Read More Toggle
+var readMoreToggle = document.querySelectorAll("#individual-page-content .main-content-card-button")
+
+var cardContent = document.querySelectorAll(".main-content-card-content");
+function checkCardHeight() {
+  Object.entries(cardContent).map((object) => {
+    var readMoreToggle = object[1].nextElementSibling;
+    if(object[1].offsetHeight < 180)
+    {
+      // console.log(object[1].offsetHeight);
+      object[1].classList.toggle("unclamped");
+      readMoreToggle.style.display = "none"
+    }
+  });
+}
+
+checkCardHeight();
+
+Object.entries(readMoreToggle).map((object) => {
+  object[1].onclick = function() {
+    var spanContent = object[1].querySelector(".link-primary_lined");
+    var arrowIcon = object[1].querySelector(".icon");
+    var cardContent = object[1].previousElementSibling;
+    
+    cardContent.classList.toggle("unclamped");
+
+    if (spanContent.innerHTML.toLowerCase().includes("more")) {
+      spanContent.innerHTML = "Read Less";
+      arrowIcon.style.transform = "rotate(180deg)";
+
+    } else {
+      spanContent.innerHTML = "Read More";
+      arrowIcon.style.transform = "rotate(0deg)";
+    }
+
+  };
+
 });

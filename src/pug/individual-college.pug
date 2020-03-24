@@ -1,0 +1,325 @@
+extends templates/_default
+
+block title
+	title IEM Kolkata | Examkhojo | Find the best colleges, exams and courses in India
+
+block stylesheet
+	link(rel="stylesheet" href="assets/css/pages/individual-page.css")
+
+block content
+	section#hero
+		.container
+			ul.breadcrumb
+				li.link-01
+					a(href="index.html") Home
+				li.link-01 
+					a(href="exams.html") Exams
+				li.link-01 IEM Kolkata
+			.header-primary-info
+				.logo
+					img(src="../assets/images/sample.jpg", alt="College Logo")
+				h3.header-03 Institute of Engineering & Management (IEM Kolkata)
+				span.label-01
+					svg.icon(width='25', height='24', viewBox='0 0 25 24' , xmlns='http://www.w3.org/2000/svg')
+						g(clip-path='url(#clip0)')
+							path(d='M12.0781 0C6.77499 0 2.45801 4.23233 2.45801 9.4315C2.45801 10.0234 2.51335 10.6203 2.62908 11.2024C2.63411 11.2369 2.65423 11.3405 2.69449 11.5181C2.8404 12.1544 3.05675 12.7809 3.33851 13.3777C4.37499 15.7701 6.65423 19.4451 11.6555 23.3814C11.7813 23.4801 11.9322 23.5294 12.0832 23.5294C12.2341 23.5294 12.3851 23.4801 12.5108 23.3814C17.5071 19.4451 19.7913 15.7701 20.8278 13.3777C21.1096 12.7809 21.3259 12.1593 21.4718 11.5181C21.5121 11.3405 21.5322 11.2369 21.5373 11.2024C21.6479 10.6203 21.7083 10.0234 21.7083 9.4315C21.6983 4.23233 17.3813 0 12.0781 0ZM20.1888 10.9705C20.1888 10.9804 20.1838 10.9903 20.1838 11.0001C20.1788 11.0248 20.1637 11.0988 20.1385 11.2122C20.1385 11.2172 20.1385 11.2172 20.1385 11.2221C20.0127 11.7746 19.8266 12.3122 19.58 12.8302C19.575 12.8351 19.575 12.845 19.57 12.8499C18.6291 15.0351 16.5662 18.3697 12.0781 22.0052C7.59008 18.3697 5.52719 15.0351 4.58631 12.8499C4.58128 12.845 4.58128 12.8351 4.57625 12.8302C4.33474 12.3172 4.14857 11.7746 4.01776 11.2221C4.01776 11.2172 4.01776 11.2172 4.01776 11.2122C3.98757 11.0988 3.9775 11.0248 3.97247 11.0001C3.97247 10.9903 3.96744 10.9804 3.96744 10.9656C3.86681 10.4575 3.8165 9.94451 3.8165 9.42656C3.8165 4.96239 7.52467 1.32692 12.0781 1.32692C16.6316 1.32692 20.3398 4.96239 20.3398 9.42656C20.3398 9.94944 20.2895 10.4674 20.1888 10.9705Z' )
+							path(d='M12.0779 3.54675C8.71186 3.54675 5.96973 6.23512 5.96973 9.53516C5.96973 12.8352 8.71186 15.5236 12.0779 15.5236C15.4439 15.5236 18.1861 12.8352 18.1861 9.53516C18.1861 6.23512 15.4439 3.54675 12.0779 3.54675ZM12.0779 14.1917C9.45652 14.1917 7.32822 12.1002 7.32822 9.53516C7.32822 6.97011 9.46155 4.87861 12.0779 4.87861C14.6943 4.87861 16.8276 6.97011 16.8276 9.53516C16.8276 12.1002 14.6993 14.1917 12.0779 14.1917Z' )
+						defs
+							clippath#clip0
+								path(d='M0.0830078 0H24.083V23.5294H0.0830078V0Z' )
+					| Kolkata, West Bengal
+			.header-buttons
+				button.icon-button-primary 
+					svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+						path(d='M20.4896 20.4896C25.1701 15.8091 25.1701 8.19094 20.4896 3.5104C15.8091 -1.17013 8.19094 -1.17013 3.5104 3.5104C-1.17013 8.19094 -1.17013 15.8091 3.5104 20.4896C8.19094 25.1701 15.8091 25.1701 20.4896 20.4896ZM4.3574 4.3574C8.57283 0.141983 15.4272 0.141983 19.6426 4.3574C23.858 8.57283 23.858 15.4272 19.6426 19.6426C15.4272 23.858 8.57283 23.858 4.3574 19.6426C0.141983 15.4272 0.146879 8.57283 4.3574 4.3574Z' )
+						path(d='M11.9999 16.4945C12.1664 16.4945 12.3132 16.426 12.4258 16.3183C12.5335 16.2106 12.6021 16.0588 12.6021 15.8923V12.5974H15.8971C16.0635 12.5974 16.2104 12.5288 16.323 12.4211C16.4307 12.3134 16.4993 12.1616 16.4993 11.9952C16.4993 11.6622 16.23 11.3929 15.902 11.3978H12.607V8.10287C12.607 7.76994 12.3377 7.50066 12.0097 7.50556C11.6768 7.50556 11.4075 7.77484 11.4124 8.10287V11.3978H8.11739C7.78447 11.3978 7.51519 11.6671 7.52009 11.9952C7.52009 12.3281 7.78936 12.5974 8.11739 12.5925H11.4124V15.8874C11.3977 16.2253 11.667 16.4945 11.9999 16.4945Z' )
+					| Bookmark
+				button.icon-button-outline
+					svg.icon(width='25', height='24', viewBox='0 0 25 24', xmlns='http://www.w3.org/2000/svg')
+						g(clip-path='url(#clip0)')
+							path(d='M23.351 11.488C22.969 11.488 22.6634 11.7875 22.6634 12.1619V18.2914C22.6634 19.9586 21.278 21.3113 19.5819 21.3113H4.49528C2.79409 21.3113 1.41379 19.9536 1.41379 18.2914V12.062C1.41379 11.6877 1.10818 11.3882 0.72618 11.3882C0.344177 11.3882 0.0385742 11.6877 0.0385742 12.062V18.2914C0.0385742 20.7023 2.04027 22.659 4.49528 22.659H19.5819C22.042 22.659 24.0386 20.6974 24.0386 18.2914V12.1619C24.0386 11.7925 23.733 11.488 23.351 11.488Z' )
+							path(d='M11.5547 17.3081C11.6872 17.4379 11.8654 17.5078 12.0386 17.5078C12.2118 17.5078 12.39 17.4429 12.5225 17.3081L16.8926 13.0254C17.1625 12.7608 17.1625 12.3366 16.8926 12.072C16.6226 11.8075 16.1897 11.8075 15.9197 12.072L12.7262 15.2067V1.53494C12.7262 1.16057 12.4206 0.861084 12.0386 0.861084C11.6566 0.861084 11.351 1.16057 11.351 1.53494V15.2067L8.15235 12.072C7.8824 11.8075 7.44946 11.8075 7.17951 12.072C6.90956 12.3366 6.90956 12.7608 7.17951 13.0254L11.5547 17.3081Z' )
+						defs
+							clippath#clip0
+								path(d='M0.0385742 0H24.0386V23.52H0.0385742V0Z' )
+					| Download Brochure
+				button.icon-button-outline
+					svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+						g(clip-path='url(#clip0)')
+							path(d='M22.5164 12.0847C22.4805 11.8896 22.3624 11.7253 22.193 11.6227C18.2914 9.29711 16.0018 8.81455 14.3282 8.46545C14.1126 8.41925 13.9021 8.37818 13.7019 8.33198L12.978 2.38203C12.9524 1.06781 11.8743 0 10.5549 0C9.25097 0 8.19857 1.0062 8.13183 2.29989C8.13183 2.32556 8.12669 2.3461 8.12669 2.37176V5.87294L8.07022 14.4205L7.14616 13.707C6.96648 13.5529 5.71386 12.5416 4.16349 12.5416C3.11621 12.5416 2.18701 12.9831 1.40156 13.8456C1.18081 14.0868 1.16028 14.4462 1.35022 14.7132C1.41696 14.8056 3.00841 17.0336 5.50338 19.3027C6.98188 20.6426 8.47065 21.7155 9.92862 22.4907C11.787 23.4764 13.6043 23.9846 15.3344 24C15.3601 24 15.3909 24 15.4165 24C17.778 24 19.6159 23.2197 20.8788 21.6847C23.692 18.2657 22.5626 12.3363 22.5164 12.0847ZM19.8058 20.812C18.8202 22.0133 17.3417 22.619 15.4165 22.619C15.3909 22.619 15.3703 22.619 15.3447 22.619C11.9102 22.5934 8.61439 20.2575 6.45824 18.3016C4.73846 16.741 3.43964 15.1701 2.84413 14.4C3.24969 14.0868 3.68605 13.9328 4.16862 13.9328C5.28263 13.9328 6.24776 14.7594 6.2529 14.7696C6.26316 14.7799 6.27856 14.7902 6.28883 14.8004L8.33717 16.3765C8.54766 16.5356 8.82488 16.5664 9.06616 16.4483C9.30231 16.3354 9.45119 16.0941 9.45632 15.8323L9.52306 5.88321V2.41797C9.52306 2.41283 9.52306 2.40257 9.52306 2.39743C9.53846 1.83273 9.99536 1.39123 10.5601 1.39123C11.135 1.39123 11.5971 1.8584 11.5971 2.42824C11.5971 2.4539 11.5971 2.48471 11.6022 2.51037L12.3774 8.97369C12.4133 9.25604 12.6135 9.48706 12.8856 9.55893C13.2552 9.65647 13.6351 9.73861 14.0407 9.82075C15.6629 10.1596 17.6754 10.5857 21.2073 12.6494C21.3819 13.8404 21.8798 18.2913 19.8058 20.812Z' )
+						defs
+							clippath#clip0
+								path(d='M0 0H24V24H0V0Z' )
+					| Apply Now
+	section#individual-page-content
+		.container
+			.main-content
+				.main-content-card.quick-facts
+					h4.sub-header-01.quick-facts_header Quick Facts
+					.quick-facts_content
+						.quick-facts_content-item
+							span.label-01 Ownership
+							p.paragraph-01 Private 
+						.quick-facts_content-item.conducting-body
+							span.label-01 Approval
+							p.paragraph-01 AICTE
+						.quick-facts_content-item.official-website
+							span.label-01 Type of Institute
+							p.paragraph-01 Graduation College
+						.quick-facts_content-item.tentative-date
+							span.label-01 Established
+							p.paragraph-01 1990
+						.quick-facts_content-item.basic-eligibility
+							span.label-01 Also Known As
+							p.paragraph-01 IEM Kolkata
+						.quick-facts_content-item.basic-eligibility
+							span.label-01 Accepted Exams
+							p.paragraph-01 WBJEE, JEE(Mains)
+				.main-content-cta
+					h5.sub-header-02 Interested in this College?
+					button.icon-button-primary
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M20.4896 20.4896C25.1701 15.8091 25.1701 8.19094 20.4896 3.5104C15.8091 -1.17013 8.19094 -1.17013 3.5104 3.5104C-1.17013 8.19094 -1.17013 15.8091 3.5104 20.4896C8.19094 25.1701 15.8091 25.1701 20.4896 20.4896ZM4.3574 4.3574C8.57283 0.141983 15.4272 0.141983 19.6426 4.3574C23.858 8.57283 23.858 15.4272 19.6426 19.6426C15.4272 23.858 8.57283 23.858 4.3574 19.6426C0.141983 15.4272 0.146879 8.57283 4.3574 4.3574Z' )
+							path(d='M11.9999 16.4945C12.1664 16.4945 12.3132 16.426 12.4258 16.3183C12.5335 16.2106 12.6021 16.0588 12.6021 15.8923V12.5974H15.8971C16.0635 12.5974 16.2104 12.5288 16.323 12.4211C16.4307 12.3134 16.4993 12.1616 16.4993 11.9952C16.4993 11.6622 16.23 11.3929 15.902 11.3978H12.607V8.10287C12.607 7.76994 12.3377 7.50066 12.0097 7.50556C11.6768 7.50556 11.4075 7.77484 11.4124 8.10287V11.3978H8.11739C7.78447 11.3978 7.51519 11.6671 7.52009 11.9952C7.52009 12.3281 7.78936 12.5974 8.11739 12.5925H11.4124V15.8874C11.3977 16.2253 11.667 16.4945 11.9999 16.4945Z' )
+						| Bookmark
+				.main-content-card
+					h4.sub-header-01.main-content-card-header Degrees Offered
+					.main-content-card-content
+						table
+							tbody
+								tr
+									td M.Tech
+									td BCA
+									td B.Tech
+								tr
+									td BBA
+									td MBA
+									td MCA
+								tr
+									td BBA LLB
+									td BSc LLB
+									td Diploma
+					button.icon-link.main-content-card-button
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z')
+						span.link-primary_lined Read More
+				.main-content-card
+					h4.sub-header-01.main-content-card-header Streams Offered
+					.main-content-card-content
+						table
+							thead
+								tr
+									th Engineering - UG - B.Tech
+									th Engineering - PG - M.Tech
+							tbody
+								tr
+									td Computer Science and Engineering
+									td Computer Science and Engineering
+								tr
+									td Electrical Engineering
+									td Electrical Engineering
+								tr
+									td Electronics Engineering
+									td Mechanical Engineering
+								tr
+									td Mechanical Engineering
+									td Bio Technology
+								tr
+									td Civil Engineering
+								tr
+									td Information Technology
+						table
+							thead
+								tr
+									th Others - UG
+									th Otehrs - PG
+							tbody
+								tr
+									td BCA
+									td MCA
+								tr
+									td BBA LLB
+									td MBA
+					button.icon-link.main-content-card-button
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z')
+						span.link-primary_lined Read More
+				.main-content-card
+					h4.sub-header-01.main-content-card-header Degrees Offered
+					.main-content-card-content
+						table
+							tbody
+								tr
+									td JEE Main
+									td WBJEE
+								tr
+									td GATE
+									td CAT
+								tr
+									td JEMAT
+									td WBJECA
+					button.icon-link.main-content-card-button
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z')
+						span.link-primary_lined Read More
+				.main-content-card
+					h4.sub-header-01.main-content-card-header Random Placeholder Title
+					.main-content-card-content
+						ol
+							li This is Item One
+							li.
+								This is 2nd item. Also adding some lorem text to wrap it to the next line elit, sed do eiusmod tempor incididunt ut labore 
+								et dolore magna aliqua. elit, sed do eiusmod tempor incididunt ut labore 
+								et dolore magna aliqua. 
+							li This is the 3rd item
+					button.icon-link.main-content-card-button
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z')
+						span.link-primary_lined Read More
+				.main-content-card
+					h4.sub-header-01.main-content-card-header About IEM Kolkata
+					.main-content-card-content
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipiscing 
+							elit, sed do eiusmod tempor incididunt ut labore 
+							et dolore magna aliqua. Ut enim ad minim veniam, 
+							quis nostrud exercitation ullamco laboris nisi ut 
+							aliquip ex ea commodo consequat. Duis aute irure 
+							dolor in reprehenderit in voluptate velit esse
+							t dolore magna aliqua. Ut enim ad minim veniam, 
+							quis nostrud exercitation ullamco laboris nisi ut 
+							aliquip ex ea commodo consequat. Duis aute irure 
+							dolor in reprehenderit in voluptate velit  
+							cillum dolore eu fugiat nulla pariatur.
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipiscing 
+							elit, sed do eiusmod tempor incididunt ut labore 
+							et dolore magna aliqua. Ut enim ad minim veniam, 
+							quis nostrud exercitation ullamco laboris nisi ut 
+							aliquip ex ea commodo consequat. Duis aute irure 
+							dolor in reprehenderit in voluptate velit esse 
+							cillum dolore eu fugiat nulla pariatur.
+					button.icon-link.main-content-card-button(data-variable = "more")
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z')
+						span.link-primary_lined Read More
+				.main-content-cta
+					h5.sub-header-02 Get all the official details
+					button.icon-button-primary
+						svg.icon(width='25', height='24', viewBox='0 0 25 24', xmlns='http://www.w3.org/2000/svg')
+							g(clip-path='url(#clip0)')
+								path(d='M23.351 11.488C22.969 11.488 22.6634 11.7875 22.6634 12.1619V18.2914C22.6634 19.9586 21.278 21.3113 19.5819 21.3113H4.49528C2.79409 21.3113 1.41379 19.9536 1.41379 18.2914V12.062C1.41379 11.6877 1.10818 11.3882 0.72618 11.3882C0.344177 11.3882 0.0385742 11.6877 0.0385742 12.062V18.2914C0.0385742 20.7023 2.04027 22.659 4.49528 22.659H19.5819C22.042 22.659 24.0386 20.6974 24.0386 18.2914V12.1619C24.0386 11.7925 23.733 11.488 23.351 11.488Z' )
+								path(d='M11.5547 17.3081C11.6872 17.4379 11.8654 17.5078 12.0386 17.5078C12.2118 17.5078 12.39 17.4429 12.5225 17.3081L16.8926 13.0254C17.1625 12.7608 17.1625 12.3366 16.8926 12.072C16.6226 11.8075 16.1897 11.8075 15.9197 12.072L12.7262 15.2067V1.53494C12.7262 1.16057 12.4206 0.861084 12.0386 0.861084C11.6566 0.861084 11.351 1.16057 11.351 1.53494V15.2067L8.15235 12.072C7.8824 11.8075 7.44946 11.8075 7.17951 12.072C6.90956 12.3366 6.90956 12.7608 7.17951 13.0254L11.5547 17.3081Z' )
+							defs
+								clippath#clip0
+									path(d='M0.0385742 0H24.0386V23.52H0.0385742V0Z' )
+						| Download Brochure
+				.main-content-card
+					h4.sub-header-01.main-content-card-header Placeholder Title
+					.main-content-card-content
+						table
+							thead
+								tr
+									th Rank
+									th Name
+									th Remarks
+							tbody
+								tr
+									td(data-label = "Rank :") 01
+									td(data-label = "Name :") Raju Srivastav
+									td(data-label = "Remarks :")
+										br
+										ul
+											li Great Timing
+											li Good Calculation Speed
+											li Great Trigonometry Knowledge
+								tr
+									td(data-label = "Rank :") 02
+									td(data-label = "Name :") Carrot Blue
+									td(data-label = "Remarks :")
+										br
+										ol
+											li Great Oration
+											li Long Study Hours
+								tr
+									td(data-label = "Rank :") 03
+									td(data-label = "Name :") LongChurch DC
+									td(data-label = "Remarks :")
+										br
+										ul
+											li Communication
+											li Leadership Qualities in Abundace
+											li Disease Prevention
+						ul.paragraph-01
+							li Candidate must have passed 10+2 2018 or 2019.
+							li Candidate appearing for 12 th boards are also eligible for exam.
+							li.
+								For 3 Consecutive years candidates can participate in the exam. 
+								The exam isconducted twice a year; candidates can appear in both 
+								the exams. The attempts will be counted as one.
+					button.icon-link.main-content-card-button(data-variable = "more")
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z')
+						span.link-primary_lined Read More
+				.main-content-card
+					h4.sub-header-01.main-content-card-header About JEE
+					.main-content-card-content
+						table
+							thead
+								tr
+									th Particulars
+									th Overview
+							tbody
+								tr
+									td Examination Name
+									td Joint Entrance Examination Main (JEE Main)
+								tr
+									td Commonly Known As
+									td JEE Main
+								tr
+									td Conducting Body
+									td National Testing Agency (NTA)
+					button.icon-link.main-content-card-button(data-variable = "more")
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z')
+						span.link-primary_lined Read More
+				.main-content-card
+					h4.sub-header-01.main-content-card-header About JEE
+					.main-content-card-content
+						table
+							thead
+								tr
+									th Serial No
+									th Events
+									th Important Dates
+							tbody
+								tr
+									td 01
+									td Registration for JEE Main 2020 January Session
+									td September 3 to October 10, 2019
+								tr
+									td 02
+									td Availability of JEE Main Admit Card
+									td December 6, 2019 (Available)
+					button.icon-link.main-content-card-button(data-variable = "more")
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z')
+						span.link-primary_lined Read More
+				.main-content-cta
+					h5.sub-header-02 Interested in this College?
+					button.icon-button-primary
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M20.4896 20.4896C25.1701 15.8091 25.1701 8.19094 20.4896 3.5104C15.8091 -1.17013 8.19094 -1.17013 3.5104 3.5104C-1.17013 8.19094 -1.17013 15.8091 3.5104 20.4896C8.19094 25.1701 15.8091 25.1701 20.4896 20.4896ZM4.3574 4.3574C8.57283 0.141983 15.4272 0.141983 19.6426 4.3574C23.858 8.57283 23.858 15.4272 19.6426 19.6426C15.4272 23.858 8.57283 23.858 4.3574 19.6426C0.141983 15.4272 0.146879 8.57283 4.3574 4.3574Z' )
+							path(d='M11.9999 16.4945C12.1664 16.4945 12.3132 16.426 12.4258 16.3183C12.5335 16.2106 12.6021 16.0588 12.6021 15.8923V12.5974H15.8971C16.0635 12.5974 16.2104 12.5288 16.323 12.4211C16.4307 12.3134 16.4993 12.1616 16.4993 11.9952C16.4993 11.6622 16.23 11.3929 15.902 11.3978H12.607V8.10287C12.607 7.76994 12.3377 7.50066 12.0097 7.50556C11.6768 7.50556 11.4075 7.77484 11.4124 8.10287V11.3978H8.11739C7.78447 11.3978 7.51519 11.6671 7.52009 11.9952C7.52009 12.3281 7.78936 12.5974 8.11739 12.5925H11.4124V15.8874C11.3977 16.2253 11.667 16.4945 11.9999 16.4945Z' )
+						| Bookmark
+
+					
+			aside.card_sidebar
+				.card_sidebar-suggestion
+					h4.sub-header-01 Top Colleges
+					a(href="individual-college.html").paragraph-01 IIT Bombay
+					a(href="individual-college.html").paragraph-01 Jadavpur University
+					a(href="individual-college.html").paragraph-01 IIM Delhi
+					a(href="individual-college.html").paragraph-01 NID Ahmedabad
+					a(href="individual-college.html").paragraph-01 Amity University
+				+searchBarSM("Search Items")

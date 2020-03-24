@@ -1,0 +1,223 @@
+@import '../_includes'
+
+#hero
+    .container
+        padding-bottom: 12vmin
+        .header-primary-info
+            margin: 4vmin auto 16px
+            color: $white-01
+        .logo
+            img
+                height: 48px
+        .header-03 
+            // width: 100%
+            margin: 4px auto 6px
+        .label-01
+            .icon
+                @include size(18px)
+                margin-right: 8px
+                margin-bottom: 2px
+                fill: $white-01
+        .header-buttons
+            display: grid
+            grid-template-columns: auto auto auto
+            grid-gap: 12px 24px
+            justify-content: start
+            justify-items: start
+            @media screen and ( max-width: 800px )
+                grid-template-columns: auto
+            button
+                &:focus
+                    box-shadow: 0 0 0 2px $grey-01
+            .icon-button-outline
+                color: $white-01
+                border-color: $grey-01
+                .icon
+                    fill: $white-01
+                &:hover
+                    color: $blue-01
+                    border-color: $blue-01
+                    .icon
+                        fill: $blue-01
+                &:focus
+                    color: $blue-01
+                    border-color: $blue-01
+                    box-shadow: 0 0 0 2px $grey-01
+#individual-page-content
+    .container
+        margin: 80px auto
+        display: grid
+        grid-template-columns: 9fr 3fr
+        grid-column-gap: 24px
+        align-items: start
+        @media screen and (max-width: 1400px)
+            grid-template-columns: auto
+        @media screen and (max-width: 600px)
+            width: 100%
+        .main-content
+            > div
+                margin: 0 auto 24px
+                background-color: $white-01
+                padding: 48px 48px
+                border-radius: 3px
+                @media screen and (max-width: 800px)
+                    padding: 24px 5%
+                h4, .sub-header-01, .main-content-card-header
+                    margin-bottom: 24px
+                    color: $grey-03
+                .main-content-card-content
+                    max-height: calc(2.25rem * 5)
+                    overflow: auto hidden
+                    position: relative
+                    &:after
+                        content: ''
+                        height: calc(2.25rem * 2)
+                        width: 100%
+                        position: absolute
+                        bottom: 0
+                        background: rgba(255,255,255,1) // Fallback
+                        background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 5%, rgba(0,0,0,0) 100%)
+                    p, .paragraph-01, li
+                        margin: 4px auto
+                    ul
+                        li
+                            @extend .paragraph-01
+                            margin-left: 1em
+                            &:before
+                                content: "\2022"
+                                color: $grey-04
+                                display: inline-block
+                                width: 1em
+                                margin-left: -1em
+                    ol
+                        li
+                            @extend .paragraph-01
+                            margin-left: 1em
+                            padding-left: 8px
+                            list-style: decimal
+                    table, th, td
+                        margin-bottom: calc(1vmax + 8px)
+                        border: 1px solid $grey-02
+                        text-align: left
+                    table
+                        border-collapse: collapse
+                        width: 100%
+                    tr
+                        &:nth-child(even)
+                            background: $white-02
+                    th, td
+                        padding: 8px 24px
+                        @media screen and (max-width: 800px)
+                            padding: 2px 2.5%
+                    th
+                        @extend .sub-header-03
+                        background: transparentize($blue-01, 0.85)
+                        color: $grey-04
+                    td 
+                        @extend .paragraph-01
+                        &:before
+                            @extend .sub-header-03
+                    @media screen and (max-width: 800px)
+                        table
+                            border: 0
+                        thead
+                            clip: rect(0,0,0,0)
+                            position: absolute
+
+                        tr
+                            display: block
+                            border: 1px solid $grey-02
+                            border-bottom: 3px solid $grey-01
+                            margin-bottom: 16px
+                            border-radius: 3px
+                            padding: 0 2.5%
+                        td
+                            display: block
+                            border: 0
+                            border-bottom: 1px solid $grey-02
+                            padding: 2px 0
+                            text-align: left
+                            &:last-child
+                                border-bottom: 0
+                            &:before
+                                content: attr(data-label)
+                                float: left
+                                padding-right: 8px
+                                color: $grey-03
+                .unclamped
+                    max-height: none
+                    &:after
+                        display: none        
+                button, .main-content-card-button
+                    margin-left: auto
+                    @media screen and ( max-width: 800px )
+                        margin-top: 24px
+                    .icon
+                        transition: transform 300ms ease-in-out
+            .quick-facts
+                .quick-facts_content
+                    display: grid
+                    grid-template-columns: 1fr 1fr 1fr
+                    grid-gap: 24px
+                    @media screen and (max-width: 1000px)
+                        grid-template-columns: 1fr 1fr
+                        grid-gap: 24px 16px
+                    @media screen and (max-width: 375px)
+                        grid-template-columns: 1fr
+                    span, p
+                        display: block
+                    .label-01
+                        color: $grey-02
+                    .link-primary
+                        @extend .paragraph-01
+            .main-content-cta
+                @include flex-parent
+                @media screen and (max-width: 1000px)
+                    flex-direction: column
+                    align-items: flex-start
+                    button, .icon-button-primary
+                        margin: 12px auto auto 0
+                .sub-header-02
+                    color: $grey-03
+        .card_sidebar
+            padding: 48px 32px
+            background-color: $white-01
+            border-radius: 3px
+            @media screen and (max-width: 800px)
+                padding: 24px 5%
+            .card_sidebar-suggestion
+                margin-bottom: 48px
+                display: grid
+                grid-template-columns: 1fr
+                grid-gap: 16px 24px
+                @media screen and (max-width: 1400px)
+                    grid-template-columns: 1fr 1fr 1fr
+                @media screen and (max-width: 1200px)
+                    grid-template-columns: 1fr 1fr
+                @media screen and (max-width: 800px)
+                    grid-template-columns: 1fr
+                .sub-header-01, .paragraph-01
+                    display: block
+                    color: $grey-03
+                    &::after
+                        content: ''
+                        display: block  
+                        width: 100%
+                        height: 1px
+                        background-color: $grey-02
+                        position: relative
+                .sub-header-01
+                    margin-bottom: 8px
+                    @media screen and (max-width: 1400px)
+                        grid-column: 1 / span 3
+                    @media screen and (max-width: 1200px)
+                        grid-column: 1 / span 2
+                    @media screen and (max-width: 800px)
+                        grid-column: 1 / span 1
+                    &::after
+                        top: calc(16px + 1px)
+                .paragraph-01
+                    &::after
+                        top: calc(8px + 1px)
+            .search-bar_small
+                width: 100%

@@ -1,0 +1,267 @@
+extends templates/_default
+
+block title
+	title JEE Mains | Examkhojo | Find the best colleges, exams and courses in India
+
+block stylesheet
+	link(rel="stylesheet" href="assets/css/pages/individual-page.css")
+
+block content
+	section#hero
+		.container
+			ul.breadcrumb
+				li.link-01
+					a(href="index.html") Home
+				li.link-01 
+					a(href="colleges.html") Colleges
+				li.link-01 JEE Mains
+			.header-primary-info
+				h3.header-03 Joint Entrance Exams Mains (JEE Mains)
+			.header-buttons
+				button.icon-button-primary 
+					svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+						path(d='M20.4896 20.4896C25.1701 15.8091 25.1701 8.19094 20.4896 3.5104C15.8091 -1.17013 8.19094 -1.17013 3.5104 3.5104C-1.17013 8.19094 -1.17013 15.8091 3.5104 20.4896C8.19094 25.1701 15.8091 25.1701 20.4896 20.4896ZM4.3574 4.3574C8.57283 0.141983 15.4272 0.141983 19.6426 4.3574C23.858 8.57283 23.858 15.4272 19.6426 19.6426C15.4272 23.858 8.57283 23.858 4.3574 19.6426C0.141983 15.4272 0.146879 8.57283 4.3574 4.3574Z' )
+						path(d='M11.9999 16.4945C12.1664 16.4945 12.3132 16.426 12.4258 16.3183C12.5335 16.2106 12.6021 16.0588 12.6021 15.8923V12.5974H15.8971C16.0635 12.5974 16.2104 12.5288 16.323 12.4211C16.4307 12.3134 16.4993 12.1616 16.4993 11.9952C16.4993 11.6622 16.23 11.3929 15.902 11.3978H12.607V8.10287C12.607 7.76994 12.3377 7.50066 12.0097 7.50556C11.6768 7.50556 11.4075 7.77484 11.4124 8.10287V11.3978H8.11739C7.78447 11.3978 7.51519 11.6671 7.52009 11.9952C7.52009 12.3281 7.78936 12.5974 8.11739 12.5925H11.4124V15.8874C11.3977 16.2253 11.667 16.4945 11.9999 16.4945Z' )
+					| Bookmark
+				button.icon-button-outline
+					svg.icon(width='25', height='24', viewBox='0 0 25 24', xmlns='http://www.w3.org/2000/svg')
+						g(clip-path='url(#clip0)')
+							path(d='M23.351 11.488C22.969 11.488 22.6634 11.7875 22.6634 12.1619V18.2914C22.6634 19.9586 21.278 21.3113 19.5819 21.3113H4.49528C2.79409 21.3113 1.41379 19.9536 1.41379 18.2914V12.062C1.41379 11.6877 1.10818 11.3882 0.72618 11.3882C0.344177 11.3882 0.0385742 11.6877 0.0385742 12.062V18.2914C0.0385742 20.7023 2.04027 22.659 4.49528 22.659H19.5819C22.042 22.659 24.0386 20.6974 24.0386 18.2914V12.1619C24.0386 11.7925 23.733 11.488 23.351 11.488Z' )
+							path(d='M11.5547 17.3081C11.6872 17.4379 11.8654 17.5078 12.0386 17.5078C12.2118 17.5078 12.39 17.4429 12.5225 17.3081L16.8926 13.0254C17.1625 12.7608 17.1625 12.3366 16.8926 12.072C16.6226 11.8075 16.1897 11.8075 15.9197 12.072L12.7262 15.2067V1.53494C12.7262 1.16057 12.4206 0.861084 12.0386 0.861084C11.6566 0.861084 11.351 1.16057 11.351 1.53494V15.2067L8.15235 12.072C7.8824 11.8075 7.44946 11.8075 7.17951 12.072C6.90956 12.3366 6.90956 12.7608 7.17951 13.0254L11.5547 17.3081Z' )
+						defs
+							clippath#clip0
+								path(d='M0.0385742 0H24.0386V23.52H0.0385742V0Z' )
+					| Download Brochure
+				button.icon-button-outline
+					svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+						g(clip-path='url(#clip0)')
+							path(d='M12.686 10.4044C12.4225 10.6678 12.4225 11.0904 12.686 11.3538C13.7746 12.4425 13.7746 14.2122 12.686 15.3008L6.96935 21.0175C5.8807 22.1061 4.11102 22.1061 3.02237 21.0175L2.16239 20.1575C1.07374 19.0688 1.07374 17.2992 2.16239 16.2105L7.87904 10.4939C8.1425 10.2304 8.1425 9.80786 7.87904 9.5444C7.61558 9.28094 7.19304 9.28094 6.92958 9.5444L1.21292 15.2611C0.432477 16.0415 0 17.0804 0 18.184C0 19.2876 0.427506 20.3265 1.21292 21.107L2.07291 21.9669C2.87821 22.7722 3.93703 23.1749 4.99586 23.1749C6.05468 23.1749 7.1135 22.7722 7.91881 21.9669L13.6355 16.2503C15.2461 14.6397 15.2461 12.015 13.6355 10.4044C13.377 10.1409 12.9495 10.1409 12.686 10.4044Z' )
+							path(d='M22.7921 2.89313L21.9321 2.03315C20.3215 0.422544 17.6968 0.422544 16.0862 2.03315L10.3696 7.7498C8.75897 9.36041 8.75897 11.9851 10.3696 13.5957C10.633 13.8592 11.0556 13.8592 11.319 13.5957C11.5825 13.3322 11.5825 12.9097 11.319 12.6462C10.2304 11.5576 10.2304 9.78791 11.319 8.69926L17.0357 2.98261C18.1243 1.89396 19.894 1.89396 20.9827 2.98261L21.8426 3.84259C22.9313 4.93124 22.9313 6.70092 21.8426 7.78957L16.126 13.5062C15.8625 13.7697 15.8625 14.1922 16.126 14.4557C16.2552 14.5849 16.4292 14.6545 16.5982 14.6545C16.7673 14.6545 16.9412 14.5899 17.0705 14.4557L22.7871 8.73903C23.5676 7.95858 24.0001 6.91964 24.0001 5.81608C24.0001 4.71252 23.5726 3.67358 22.7921 2.89313Z' )
+						defs
+							clippath#clip0
+								path(d='M0 0H24V24H0V0Z' )
+					| Apply Online
+	section#individual-page-content
+		.container
+			.main-content
+				.main-content-card.quick-facts
+					h4.sub-header-01.quick-facts_header Quick Facts
+					.quick-facts_content
+						.quick-facts_content-item
+							span.label-01 Ownership
+							p.paragraph-01 Private 
+						.quick-facts_content-item.conducting-body
+							span.label-01 Approval
+							p.paragraph-01 AICTE
+						.quick-facts_content-item.official-website
+							span.label-01 Type of Institute
+							p.paragraph-01 Graduation College
+						.quick-facts_content-item.tentative-date
+							span.label-01 Established
+							p.paragraph-01 1990
+						.quick-facts_content-item.basic-eligibility
+							span.label-01 Also Known As
+							p.paragraph-01 IEM Kolkata
+						.quick-facts_content-item.basic-eligibility
+							span.label-01 Accepted Exams
+							p.paragraph-01 WBJEE, JEE(Mains)
+				.main-content-cta
+					h5.sub-header-02 Interested in taking this Exam?
+					button.icon-button-primary
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M20.4896 20.4896C25.1701 15.8091 25.1701 8.19094 20.4896 3.5104C15.8091 -1.17013 8.19094 -1.17013 3.5104 3.5104C-1.17013 8.19094 -1.17013 15.8091 3.5104 20.4896C8.19094 25.1701 15.8091 25.1701 20.4896 20.4896ZM4.3574 4.3574C8.57283 0.141983 15.4272 0.141983 19.6426 4.3574C23.858 8.57283 23.858 15.4272 19.6426 19.6426C15.4272 23.858 8.57283 23.858 4.3574 19.6426C0.141983 15.4272 0.146879 8.57283 4.3574 4.3574Z' )
+							path(d='M11.9999 16.4945C12.1664 16.4945 12.3132 16.426 12.4258 16.3183C12.5335 16.2106 12.6021 16.0588 12.6021 15.8923V12.5974H15.8971C16.0635 12.5974 16.2104 12.5288 16.323 12.4211C16.4307 12.3134 16.4993 12.1616 16.4993 11.9952C16.4993 11.6622 16.23 11.3929 15.902 11.3978H12.607V8.10287C12.607 7.76994 12.3377 7.50066 12.0097 7.50556C11.6768 7.50556 11.4075 7.77484 11.4124 8.10287V11.3978H8.11739C7.78447 11.3978 7.51519 11.6671 7.52009 11.9952C7.52009 12.3281 7.78936 12.5974 8.11739 12.5925H11.4124V15.8874C11.3977 16.2253 11.667 16.4945 11.9999 16.4945Z' )
+						| Bookmark
+				.main-content-card
+					h4.sub-header-01.main-content-card-header About JEE
+					.main-content-card-content
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipiscing 
+							elit, sed do eiusmod tempor incididunt ut labore 
+							et dolore magna aliqua. Ut enim ad minim veniam, 
+							quis nostrud exercitation ullamco laboris nisi ut 
+							aliquip ex ea commodo consequat. Duis aute irure 
+							dolor in reprehenderit in voluptate velit esse
+							t dolore magna aliqua. Ut enim ad minim veniam, 
+							quis nostrud exercitation ullamco laboris nisi ut 
+							aliquip ex ea commodo consequat. Duis aute irure 
+							dolor in reprehenderit in voluptate velit  
+							cillum dolore eu fugiat nulla pariatur.
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipiscing 
+							elit, sed do eiusmod tempor incididunt ut labore 
+							et dolore magna aliqua. Ut enim ad minim veniam, 
+							quis nostrud exercitation ullamco laboris nisi ut 
+							aliquip ex ea commodo consequat. Duis aute irure 
+							dolor in reprehenderit in voluptate velit esse 
+							cillum dolore eu fugiat nulla pariatur.
+					button.icon-link.main-content-card-button
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z')
+						span.link-primary_lined Read More
+				.main-content-card
+					h4.sub-header-01.main-content-card-header About JEE
+					.main-content-card-content
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipiscing 
+							elit, sed do eiusmod tempor incididunt ut labore 
+							et dolore magna aliqua. Ut enim ad minim veniam, 
+							quis nostrud exercitation ullamco laboris nisi ut 
+							aliquip ex ea commodo consequat. Duis aute irure 
+							dolor in reprehenderit in voluptate velit esse
+							t dolore magna aliqua. Ut enim ad minim veniam, 
+							quis nostrud exercitation ullamco laboris nisi ut 
+							aliquip ex ea commodo consequat. Duis aute irure 
+							dolor in reprehenderit in voluptate velit  
+							cillum dolore eu fugiat nulla pariatur.
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipiscing 
+							elit, sed do eiusmod tempor incididunt ut labore 
+							et dolore magna aliqua. Ut enim ad minim veniam, 
+							quis nostrud exercitation ullamco laboris nisi ut 
+							aliquip ex ea commodo consequat. Duis aute irure 
+							dolor in reprehenderit in voluptate velit esse 
+							cillum dolore eu fugiat nulla pariatur.
+					button.icon-link.main-content-card-button(data-variable = "more")
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z')
+						span.link-primary_lined Read More
+				
+				.main-content-card
+					h4.sub-header-01.main-content-card-header About JEE
+					.main-content-card-content
+						ul.paragraph-01
+							li Candidate must have passed 10+2 2018 or 2019.
+							li Candidate appearing for 12 th boards are also eligible for exam.
+							li.
+								For 3 Consecutive years candidates can participate in the exam. 
+								The exam isconducted twice a year; candidates can appear in both 
+								the exams. The attempts will be counted as one.
+					button.icon-link.main-content-card-button(data-variable = "more")
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z')
+						span.link-primary_lined Read More
+				.main-content-cta
+					h5.sub-header-02 Get all the official details
+					button.icon-button-primary
+						svg.icon(width='25', height='24', viewBox='0 0 25 24', xmlns='http://www.w3.org/2000/svg')
+							g(clip-path='url(#clip0)')
+								path(d='M23.351 11.488C22.969 11.488 22.6634 11.7875 22.6634 12.1619V18.2914C22.6634 19.9586 21.278 21.3113 19.5819 21.3113H4.49528C2.79409 21.3113 1.41379 19.9536 1.41379 18.2914V12.062C1.41379 11.6877 1.10818 11.3882 0.72618 11.3882C0.344177 11.3882 0.0385742 11.6877 0.0385742 12.062V18.2914C0.0385742 20.7023 2.04027 22.659 4.49528 22.659H19.5819C22.042 22.659 24.0386 20.6974 24.0386 18.2914V12.1619C24.0386 11.7925 23.733 11.488 23.351 11.488Z' )
+								path(d='M11.5547 17.3081C11.6872 17.4379 11.8654 17.5078 12.0386 17.5078C12.2118 17.5078 12.39 17.4429 12.5225 17.3081L16.8926 13.0254C17.1625 12.7608 17.1625 12.3366 16.8926 12.072C16.6226 11.8075 16.1897 11.8075 15.9197 12.072L12.7262 15.2067V1.53494C12.7262 1.16057 12.4206 0.861084 12.0386 0.861084C11.6566 0.861084 11.351 1.16057 11.351 1.53494V15.2067L8.15235 12.072C7.8824 11.8075 7.44946 11.8075 7.17951 12.072C6.90956 12.3366 6.90956 12.7608 7.17951 13.0254L11.5547 17.3081Z' )
+							defs
+								clippath#clip0
+									path(d='M0.0385742 0H24.0386V23.52H0.0385742V0Z' )
+						| Download Brochure
+				.main-content-card
+					h4.sub-header-01.main-content-card-header About JEE
+					.main-content-card-content
+						table
+							thead
+								tr
+									th Particulars
+									th Overview
+							tbody
+								tr
+									td(data-label="Particulars") Examination Name
+									td(data-label="Overview") Joint Entrance Examination Main (JEE Main)
+								tr
+									td(data-label="Particulars") Commonly Known As
+									td(data-label="Overview") JEE Main
+								tr
+									td(data-label="Particulars") Conducting Body
+									td(data-label="Overview") National Testing Agency (NTA)
+					button.icon-link.main-content-card-button(data-variable = "more")
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z')
+						span.link-primary_lined Read More
+				.main-content-card
+					h4.sub-header-01.main-content-card-header Important Details
+					.main-content-card-content
+						table.more-than-two-column
+							thead
+								tr
+									th Serial No
+									th Events
+									th Important Dates
+									th Secondary Dates
+							tbody
+								tr
+									td(data-label="Serial No :") 01
+									td(data-label="Events :") Registration for JEE Main 2020 January Session
+									td(data-label="Important Dates :") September 3 to October 10, 2019
+									td(data-label="Secondary Dates :") September 3 to October 10, 2019
+								tr
+									td(data-label="Serial No :") 02
+									td(data-label="Events :") Availability of JEE Main Admit Card
+									td(data-label="Important Dates :") December 6, 2019 (Available)
+									td(data-label="Secondary Dates :") December 6, 2019 (Available)
+					button.icon-link.main-content-card-button(data-variable = "more")
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z')
+						span.link-primary_lined Read More
+
+				.main-content-card
+					h4.sub-header-01.main-content-card-header JEE Main Cutoff
+					.main-content-card-content
+						p.paragraph-01.
+							JEE Main Cutoff 2020 will be released after the declaration of the result NTA. JEE Main Cutoff
+							is classified in two parts – Qualifying cutoff and Admission cutoff.
+					button.icon-link.main-content-card-button(data-variable = "more")
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z')
+						span.link-primary_lined Read More
+				.main-content-cta
+					h5.sub-header-02 Interested in taking this Exam?
+					button.icon-button-primary
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M20.4896 20.4896C25.1701 15.8091 25.1701 8.19094 20.4896 3.5104C15.8091 -1.17013 8.19094 -1.17013 3.5104 3.5104C-1.17013 8.19094 -1.17013 15.8091 3.5104 20.4896C8.19094 25.1701 15.8091 25.1701 20.4896 20.4896ZM4.3574 4.3574C8.57283 0.141983 15.4272 0.141983 19.6426 4.3574C23.858 8.57283 23.858 15.4272 19.6426 19.6426C15.4272 23.858 8.57283 23.858 4.3574 19.6426C0.141983 15.4272 0.146879 8.57283 4.3574 4.3574Z' )
+							path(d='M11.9999 16.4945C12.1664 16.4945 12.3132 16.426 12.4258 16.3183C12.5335 16.2106 12.6021 16.0588 12.6021 15.8923V12.5974H15.8971C16.0635 12.5974 16.2104 12.5288 16.323 12.4211C16.4307 12.3134 16.4993 12.1616 16.4993 11.9952C16.4993 11.6622 16.23 11.3929 15.902 11.3978H12.607V8.10287C12.607 7.76994 12.3377 7.50066 12.0097 7.50556C11.6768 7.50556 11.4075 7.77484 11.4124 8.10287V11.3978H8.11739C7.78447 11.3978 7.51519 11.6671 7.52009 11.9952C7.52009 12.3281 7.78936 12.5974 8.11739 12.5925H11.4124V15.8874C11.3977 16.2253 11.667 16.4945 11.9999 16.4945Z' )
+						| Bookmark
+				.main-content-card
+					h4.sub-header-01.main-content-card-header JEE Main Cutoff of 3 Previous Year
+					.main-content-card-content
+						table.more-than-two-column
+							thead
+								tr
+									th Category
+									th 2019
+									th 2018
+									th 2017
+							tbody
+								tr
+									td(data-label="Category :") General
+									td(data-label="2019 :") 89.7548849
+									td(data-label="2018 :") 74
+									td(data-label="2017 :") 81
+								tr
+									td(data-label="Category :") OBC
+									td(data-label="2019 :") 74.3166557
+									td(data-label="2018 :") 45
+									td(data-label="2017 :") 49
+								tr
+									td(data-label="Category :") SC
+									td(data-label="2019 :") 54.0128155
+									td(data-label="2018 :") 29
+									td(data-label="2017 :") 32
+								tr
+									td(data-label="Category :") ST
+									td(data-label="2019 :") 44.3345172
+									td(data-label="2018 :") 24
+									td(data-label="2017 :") 27
+					button.icon-link.main-content-card-button(data-variable = "more")
+						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+							path(d='M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z')
+						span.link-primary_lined Read More
+
+
+					
+			aside.card_sidebar
+				.card_sidebar-suggestion
+					h4.sub-header-01 Popular Exams
+					a(href="individual-college.html").paragraph-01 JEE Advanced
+					a(href="individual-college.html").paragraph-01 NID DAT
+					a(href="individual-college.html").paragraph-01 UGC NET
+					a(href="individual-college.html").paragraph-01 GATE
+					a(href="individual-college.html").paragraph-01 CAT
+					a(href="individual-college.html").paragraph-01 NEET UG
+				+searchBarSM("Search Items")

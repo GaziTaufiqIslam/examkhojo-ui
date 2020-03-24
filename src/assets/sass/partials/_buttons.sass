@@ -251,11 +251,17 @@
 .icon-link
   @include flex-parent
   background: transparent
+  cursor: pointer
   .link-primary_lined
+    @include transition(150ms)
     &::after
-      top: 21px
+      top: 22px
+      @include transition(150ms)
   .icon
     fill: $blue-02
     @include size(18px)
     margin-right: 4px
     margin-top: auto
+    @include transition(150ms)
+  &:hover .icon
+    fill: $blue-03
