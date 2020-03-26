@@ -1,0 +1,71 @@
+extends templates/_default
+
+block title
+	title Forgot Passowrd | Account Recovery | Examkhojo
+
+block stylesheet
+	link(rel="stylesheet" href="assets/css/pages/account-settings.css")
+
+block content
+	section#hero
+		.container
+			ul.breadcrumb
+				li.link-01
+					a(href="index.html") Home
+				li.link-01
+					a(href="dashboard.html") Dashboard
+				li.link-01 Account Settings
+			.header-primary-info
+				h4.sub-header-01 Account Settings
+				p.paragraph-01 Add More Details to let us serve you better
+	section#account
+		.basic-details
+			.container
+				h4.sub-header-01 Basic Details
+				form.form-basic-details
+					.form-element
+						label(for="name") Full Name
+						input( required type='text', name='email', value="Amit Trivedi" ,placeholder='Type your Full Name')
+					.form-element
+						label(for="email") Your Email Address
+						input( required type='email', autocomplete="username", name='email', value="amittrivedi@example.com", placeholder='Type your Email')
+					.form-element
+						label(for="phone") Your Phone Number
+						span.phone-input(data-code="+91")
+							input(type='text', name='phone', value="", placeholder='Your 10-digit Phone Number' pattern="[0-9]{10}" maxlength="10")
+					.form-element
+						input.button-primary(type="submit" value="Save Basic Details")
+		.edu-details
+			.container
+				h4.sub-header-01 Educational Details
+				form.form-edu-details
+					.form-element
+						label(for="college") Your College
+						input(type='text', name='college', value="" , placeholder='Type your College Name')
+					.form-element
+						label(for="course") Your Email Address
+						input(type='text', name='course', value="", placeholder='Your Course, for e.g. B.Tech CSE')
+					.form-element
+						input.button-primary(type="submit" value="Save Educational Details")
+		.update-password#update-password
+			.container
+				h4.sub-header-01 Update Password
+				form.form-edu-details
+					.form-element
+						label(for="old-password") Your Old/Current Password
+						input( required type='password', name='old-password', placeholder='Type your Old Password')
+					.form-element
+						label(for="new-password") Set New Password
+						input( required type='password', name='new-password', placeholder='Type your New Password')
+					.form-element
+						input.button-primary(type="submit" value="Update Password")
+		.close-account
+			.container
+				h4.sub-header-01 Close Account
+				p.paragraph-01 All account data will be deleted
+				button.button-primary_danger Delete Account
+			.delete-confirmation-modal
+				.delete-confirmation
+					h6.sub-header-03 Are you sure you want to delete your account?
+					button#delAccount.button-outline Yes, Delete Account
+					button.button-primary No, Go back

@@ -267,15 +267,28 @@ Object.entries(readMoreToggle).map((object) => {
       spanContent.innerHTML = "Read More";
       arrowIcon.style.transform = "rotate(0deg)";
     }
-
+    
   };
-
+  
 });
 
 
+//Delete Account
+var closeAccountSection = document.querySelector("#account .close-account");
+var deleteModalOpenButton = closeAccountSection.querySelector(".button-primary_danger");
+var deleteModal = closeAccountSection.querySelector(".delete-confirmation-modal");
+var deleteModalCloseButton = closeAccountSection.querySelector(".button-primary");
+
+deleteModalOpenButton.onclick = function() {
+  deleteModal.style.display = "block";
+}
+deleteModalCloseButton.onclick = function() {
+  deleteModal.style.display = "none";
+}
+
 // Dashboard User navigation
 var userDashboardContent = document.querySelector("#dashboard-content");
-var bookmarkLinks = userDashboardContent.querySelectorAll(".bookmark-links li");
+var bookmarkLinks = userDashboardContent.querySelectorAll("li");
 
 var cardExams = userDashboardContent.querySelectorAll(".card_exam");
 var cardCollege = userDashboardContent.querySelectorAll(".card_college");
