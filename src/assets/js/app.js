@@ -40,7 +40,7 @@ toggleButton.addEventListener("click", toggleDropdown);
 // Sticky Navabar Effect
 window.onscroll = function() {scrollFunction()};
 
-var navbar = document.querySelector("nav");
+var navbar = document.querySelector(".primary-navbar");
 //var sticky = navbar.offsetTop;
 
 function scrollFunction() {
@@ -127,7 +127,7 @@ Object.entries(modalInput).map((object) => {
   object[1].onkeyup = function() {
     //  alert(" Search Box Key Pressed");
     // Declare variables
-    var filter, a, i, txtValue;
+    var filter, i;
     
     var input = object[1].value;
     filter = input.toLowerCase();
@@ -270,4 +270,74 @@ Object.entries(readMoreToggle).map((object) => {
 
   };
 
+});
+
+
+// Dashboard User navigation
+var userDashboardContent = document.querySelector("#dashboard-content");
+var bookmarkLinks = userDashboardContent.querySelectorAll(".bookmark-links li");
+
+var cardExams = userDashboardContent.querySelectorAll(".card_exam");
+var cardCollege = userDashboardContent.querySelectorAll(".card_college");
+var cardCourse = userDashboardContent.querySelectorAll(".card_course");
+
+
+
+//A function to select sibling elements
+function getSiblings(el, filter) {
+  var siblings = [];
+  el = el.parentNode.firstChild;
+  do { if (!filter || filter(el)) siblings.push(el); } while (el = el.nextSiblingElement);
+  return siblings;
+}
+
+
+Object.entries(bookmarkLinks).map((object) => {
+  object[1].onclick = function() {
+
+    var i;
+    for( i = 0; i < bookmarkLinks.length; i++) {
+      bookmarkLinks[i].classList.remove("active");
+    }
+    this.classList.toggle("active");
+
+    var dataContent = this.getAttribute("data-content");
+    
+
+    if(dataContent == "exams") {
+      for( i = 0; i < cardExams.length; i++) {
+        cardExams[i].style.display = 'block';
+      }
+      for( i = 0; i < cardCollege.length; i++) {
+        cardCollege[i].style.display = 'none';
+      }
+      for( i = 0; i < cardCourse.length; i++) {
+        cardCourse[i].style.display = 'none';
+      }
+      
+    }
+    if(dataContent == "colleges") {
+      for( i = 0; i < cardExams.length; i++) {
+        cardExams[i].style.display = 'none';
+      }
+      for( i = 0; i < cardCollege.length; i++) {
+        cardCollege[i].style.display = 'block';
+      }
+      for( i = 0; i < cardCourse.length; i++) {
+        cardCourse[i].style.display = 'none';
+      }
+    }
+    if(dataContent == "courses") {
+      for( i = 0; i < cardExams.length; i++) {
+        cardExams[i].style.display = 'none';
+      }
+      for( i = 0; i < cardCollege.length; i++) {
+        cardCollege[i].style.display = 'none';
+      }
+      for( i = 0; i < cardCourse.length; i++) {
+        cardCourse[i].style.display = 'block';
+      }
+    }
+    
+  }
 });

@@ -1,0 +1,91 @@
+@import '../_includes'
+
+#hero
+    .container
+        padding-bottom: 12vmin
+        @media screen and ( max-width: 800px )
+            padding-bottom: 20vmin
+        .header-primary-info
+            margin: 4vmin auto 16px
+            color: $white-01
+            display: grid
+            grid-template-columns: auto 1fr
+            grid-gap: 8px 32px
+            grid-template-areas: "img content" "img buttons"
+            @media screen and ( max-width: 480px )
+                grid-column-gap: 16px
+            .logo
+                grid-area: img
+                img
+                    @include size(120px)
+                    border-radius: 100%
+                    @media screen and ( max-width: 800px )
+                        @include size(20vmin)
+            h4, .sub-header-01 
+                grid-area: content
+                margin: 4px 0 6px
+            .label-01
+                .icon
+                    @include size(18px)
+                    margin-right: 8px
+                    margin-bottom: 2px
+                    fill: $white-01
+            .header-buttons
+                grid-area: buttons
+                display: grid
+                grid-template-columns: auto auto auto
+                grid-gap: 12px 24px
+                justify-content: start
+                justify-items: start
+                @media screen and ( max-width: 800px )
+                    grid-template-columns: auto
+                button
+                    &:focus
+                        box-shadow: 0 0 0 2px $grey-01
+                button, .icon-button-outline, .button-outline
+                    color: $white-01
+                    border-color: $grey-01
+                    .icon
+                        fill: $white-01
+                    &:hover
+                        color: $blue-01
+                        border-color: $blue-01
+                        .icon
+                            fill: $blue-01
+                    &:focus
+                        color: $blue-01
+                        border-color: $blue-01
+                        box-shadow: 0 0 0 2px $grey-01
+                        .icon
+                            fill: $blue-01
+#dashboard-content
+    .container
+        margin-bottom: 10vmax
+    .bookmark-nav
+        background-color: $white-01
+        width: 100%
+        max-width: 480px
+        border-radius: 3px
+        margin: -60px auto auto
+        padding: 24px 0 36px
+        @media screen and ( max-width: 800px )
+            padding: 16px 4px
+        .bookmark-header
+            text-align: center
+            margin-bottom: 16px
+            color: $grey-02
+        .bookmark-links
+            @include flex-parent
+            justify-content: space-evenly
+            .button-01
+                padding: 8px
+                color: $grey-04
+                &:hover
+                    color: $grey-02
+                &:focus
+                    color: $blue-02
+            .active
+                a
+                    color: $blue-02
+    .card_college, .card_course
+        display: none
