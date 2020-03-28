@@ -156,6 +156,8 @@
         .nav-content-brand  
             background: url("../../images/logo-white.png") no-repeat
             background-size: contain
+                size: contain
+                position: left 60%
         .nav-content-links
             .hamburger-content
                 ul
@@ -203,6 +205,8 @@
         @include size(34px)
         border-radius: 50%
         margin-right: 8px
+        @media screen and ( max-width: 800px )
+            @include size(22px)
     span
         color: $grey-04
     .icon
