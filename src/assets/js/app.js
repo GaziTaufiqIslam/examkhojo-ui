@@ -286,6 +286,21 @@ deleteModalCloseButton.onclick = function() {
   deleteModal.style.display = "none";
 }
 
+
+// Avatar Change Button
+
+var displayImageButtons = document.querySelector(".display-image-buttons");
+var uploadFormShowButton = displayImageButtons.querySelector(".button-primary");
+var uploadForm = displayImageButtons.querySelector("form");
+uploadFormShowButton.onclick = function() {
+  uploadForm.style.display = 'block';
+  this.style.display = 'none';
+}
+
+//Add New Javascript Here
+
+
+
 // Dashboard User navigation
 var userDashboardContent = document.querySelector("#dashboard-content");
 var bookmarkLinks = userDashboardContent.querySelectorAll("li");

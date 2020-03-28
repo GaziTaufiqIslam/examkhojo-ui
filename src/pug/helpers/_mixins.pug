@@ -22,7 +22,7 @@ mixin cardCollege( hrefPage, srcImg, collegeName, location, approval, type, href
                 span.label-01= location
                 span.label-01= approval
                 span.label-01= type
-            a(href=hrefDownload).link-primary_lined Brochure
+            a(href=hrefDownload download).link-primary_lined Brochure
 
 mixin cardExam( hrefPage ,examName, conductingBody, level, course, hrefDownload)
     .card_exam
@@ -32,7 +32,7 @@ mixin cardExam( hrefPage ,examName, conductingBody, level, course, hrefDownload)
                 span.label-01= conductingBody
                 span.label-01= level
                 span.label-01= course
-            a(href=hrefDownload).link-primary_lined Brochure
+            a(href=hrefDownload download).link-primary_lined Brochure
 
 mixin cardCourse( hrefPage, courseName, stream, level, duration)
     .card_course

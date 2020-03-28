@@ -20,7 +20,7 @@
     //     color: $blue-02
     //     &:hover
     //         color: $blue-01
-    .basic-details, .edu-details, .update-password, .close-account
+    .basic-details, .contact-details, .edu-details, .update-password, .close-account
         padding: 64px 0 48px
         border-bottom: 1px solid $grey-03
         form
@@ -43,6 +43,38 @@
                         margin: auto 12px auto 8px
             input[type="submit"]
                 @extend .button-primary
+    .display-image
+        margin-top: 32px
+        @include flex-parent
+        @media screen and ( max-width: 800px )
+            flex-direction: column
+        .display-image-avatar
+            @include size(160px)
+            border-radius: 100%
+            margin-right: 5%
+            min-width: 160px
+            @media screen and ( max-width: 800px )
+                @include size(20vmin)
+                min-width: auto
+                margin-bottom: 5vmin
+        .display-image-buttons
+            width: 100%
+            display: grid
+            grid-template-columns: auto
+            grid-gap: 24px
+            justify-items: flex-start
+            .form-upload-picture
+                display: none
+                margin: 0
+                input[type="file"]
+                    border: none
+                    width: auto
+                    padding: 0
+                    background: transparent
+                    margin-bottom: 12px
+                    @media screen and ( max-width: 800px )
+                        margin-bottom: 4vmin
+
     .close-account
         .paragraph-01
             margin: 8px auto 24px

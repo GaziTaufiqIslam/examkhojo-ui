@@ -14,7 +14,7 @@
             grid-template-areas: "img content" "img buttons"
             @media screen and ( max-width: 480px )
                 grid-column-gap: 16px
-            .logo
+            .avatar
                 grid-area: img
                 img
                     @include size(120px)
@@ -35,7 +35,7 @@
                 display: grid
                 grid-template-columns: auto auto auto
                 grid-gap: 12px 24px
-                justify-content: start
+                align-items: start
                 justify-items: start
                 @media screen and ( max-width: 800px )
                     grid-template-columns: auto
