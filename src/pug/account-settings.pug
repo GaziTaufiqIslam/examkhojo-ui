@@ -96,3 +96,29 @@ block content
 					h6.sub-header-03 Are you sure you want to delete your account?
 					button#delAccount.button-outline Yes, Delete Account
 					button.button-primary No, Go back
+block js
+	script.
+		//Delete Account
+		var deleteModalOpenButton = document.querySelector("#account .close-account .button-primary_danger");
+		var deleteModal = document.querySelector("#account .close-account .delete-confirmation-modal");
+		var deleteModalCloseButton = document.querySelector("#account .close-account .button-primary");
+
+		deleteModalOpenButton.onclick = function() {
+			deleteModal.style.display = "block";
+		}
+		deleteModalCloseButton.onclick = function() {
+			deleteModal.style.display = "none";
+		}
+
+
+		// Avatar Change Button
+
+		// var displayImageButtons = document.querySelector(".display-image-buttons");
+		var uploadFormShowButton = document.querySelector(".display-image-buttons .button-primary");
+		var uploadForm = document.querySelector(".display-image-buttons form");
+		uploadFormShowButton.onclick = function() {
+			uploadForm.style.display = 'block';
+			this.style.display = 'none';
+		}
+
+
