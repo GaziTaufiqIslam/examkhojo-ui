@@ -61,3 +61,62 @@ block content
 				+cardCourse( "individual-course.html", "B.Des - Interaction Design", "Design", "Undergraduate", "4years" )
 				+cardCourse( "individual-course.html", "BCA", "Computer", "Undergraduate", "3years" )
 				+cardCourse( "individual-course.html", "B.Des - Interaction Design", "Design", "Undergraduate", "4years" )
+block js
+	script.
+		// Dashboard Bookmarks User navigation
+
+		var bookmarkLinks = document.querySelectorAll("#dashboard-content li");
+		var cardExams = document.querySelectorAll("#dashboard-content .card_exam");
+		var cardCollege = document.querySelectorAll("#dashboard-content .card_college");
+		var cardCourse = document.querySelectorAll("#dashboard-content .card_course");
+
+
+		Object.entries(bookmarkLinks).map((object) => {
+			object[1].onclick = function() {
+
+				var i;
+				for( i = 0; i < bookmarkLinks.length; i++) {
+					bookmarkLinks[i].classList.remove("active");
+				}
+				this.classList.toggle("active");
+
+				var dataContent = this.getAttribute("data-content");
+				
+
+				if(dataContent == "exams") {
+					for( i = 0; i < cardExams.length; i++) {
+						cardExams[i].style.display = 'block';
+					}
+					for( i = 0; i < cardCollege.length; i++) {
+						cardCollege[i].style.display = 'none';
+					}
+					for( i = 0; i < cardCourse.length; i++) {
+						cardCourse[i].style.display = 'none';
+				}
+				
+				}
+				if(dataContent == "colleges") {
+					for( i = 0; i < cardExams.length; i++) {
+						cardExams[i].style.display = 'none';
+					}
+					for( i = 0; i < cardCollege.length; i++) {
+						cardCollege[i].style.display = 'block';
+					}
+					for( i = 0; i < cardCourse.length; i++) {
+						cardCourse[i].style.display = 'none';
+					}
+				}
+				if(dataContent == "courses") {
+					for( i = 0; i < cardExams.length; i++) {
+						cardExams[i].style.display = 'none';
+					}
+					for( i = 0; i < cardCollege.length; i++) {
+						cardCollege[i].style.display = 'none';
+					}
+					for( i = 0; i < cardCourse.length; i++) {
+						cardCourse[i].style.display = 'block';
+					}
+				}
+				
+			}
+		});
