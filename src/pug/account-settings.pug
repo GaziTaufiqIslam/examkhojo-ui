@@ -1,7 +1,7 @@
 extends templates/_default
 
 block title
-	title Forgot Passowrd | Account Recovery | Examkhojo
+	title Account Settings| Full Name | Examkhojo
 
 block stylesheet
 	link(rel="stylesheet" href="assets/css/pages/account-settings.css")
@@ -67,10 +67,10 @@ block content
 				h4.sub-header-01 Educational Details
 				form.form-edu-details
 					.form-element
-						label(for="college") Your College
+						label(for="college") Your Insititute
 						input(type='text', name='college', value="" , placeholder='Type your College Name')
 					.form-element
-						label(for="course") Course
+						label(for="course") Interest/Course
 						input(type='text', name='course', value="", placeholder='Your Course, for e.g. B.Tech CSE')
 					.form-element
 						input.button-primary(type="submit" value="Save Educational Details")
