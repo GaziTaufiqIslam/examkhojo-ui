@@ -62,7 +62,7 @@
                             @include transition(100ms)
                             &:hover
                                 color: transparentize($grey-04, 0.3)
-                            @media screen and ( max-width:  1400px)
+                            @media screen and ( max-width:  1340px)
                                 padding: 12px 8px
                 .nav-content-links__right-buttons
                     @include flex-parent
@@ -140,6 +140,13 @@
     .nav-content-brand
         height: 16px
         width: 100px
+    .nav-content-links__left-links
+        li
+            a
+                @media screen and ( max-width: 1350px )
+                    padding: 12px 24px !important
+            &:last-child
+                padding-right: 48px
     .nav-content-links__user
         display: flex
         margin: 0 16px 0 0

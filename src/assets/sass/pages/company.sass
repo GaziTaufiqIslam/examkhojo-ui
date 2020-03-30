@@ -1,0 +1,26 @@
+@import '../_includes'
+
+#hero
+    .container
+        padding-bottom: 16vmin
+        h1,h2,h3
+            margin: 8vmin auto 16px
+            color: $white-01
+#content
+    .container
+        padding: 4vmin 0
+        max-width: 800px
+        h1,h2,h3,h4,h5,h6
+            @extend .sub-header-01
+            margin: 4vh auto 1vh
+        p, ul, ol, a
+            @extend .paragraph-01
+            margin: 1vh auto 2vh
+        a
+            color: $blue-02
+            &:hover
+                color: $blue-03
+        ul
+            li
+                list-style-type: disc
+                margin-left: 1em
