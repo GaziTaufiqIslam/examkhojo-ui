@@ -33,8 +33,10 @@
                 .phone-input
                     position: relative
                     @include flex-parent
+                    flex-wrap: wrap
                     input
                         flex-grow: 1
+                        width: auto
                     &::before
                         content: attr(data-code)
                         @extend .button-01
