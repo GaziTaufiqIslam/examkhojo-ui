@@ -1,4 +1,7 @@
 import axios from 'axios';
+import bouncer from 'formbouncerjs';
+
+var formValidate = new bouncer('[data-validate]');
 
 /* window.addEventListener('load', () => {
 

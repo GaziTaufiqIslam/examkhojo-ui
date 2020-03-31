@@ -1,7 +1,9 @@
 extends templates/_default
 
 block title
-	title Courses | Examkhojo | Find the best colleges, exams and courses in India
+	title Top Courses | Listed by Examkhojo
+	meta(name="description", content="Top courses in India rated by Examkhojo.com")
+	meta(name="keywords", content="Courses, Courses List, List of Top Courses in India, Examkhojo Top Courses List, Examkhojo List of Top Courses in India, Search Courses, Courses in India, Top Courses in India")
 
 block stylesheet
 	link(rel="stylesheet" href="assets/css/pages/listpages.css")
@@ -12,7 +14,7 @@ block content
 			ul.breadcrumb
 				li.link-01
 					a(href="index.html") Home
-				li.link-01 Colleges
+				li.link-01 Courses
 			h3.header-03 Browse Popular Courses
 			+searchBarSM("Search Colleges")
 	section#cards-section
