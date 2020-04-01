@@ -14,18 +14,12 @@ block content
 					a(href="index.html") Home
 				li.link-01 Dashboard
 			.header-primary-info
+				//- User Avatar will show here
 				.avatar
 					img(src="https://ui-avatars.com/api/?format=svg&name=Florence+Nightingale", alt="College Logo")
+				//- Full Name of the user (that was used during sign up)
 				h4.sub-header-01 Full Name
 				.header-buttons
-					//- button.icon-button-outline 
-					//- 	svg.icon(width='24', height='24', viewBox='0 0 24 24' , xmlns='http://www.w3.org/2000/svg')
-					//- 		g(clip-path='url(#clip0)')
-					//- 			path(d='M22.4454 1.55498C20.3795 -0.516049 17.0198 -0.516049 14.9539 1.55498L1.21862 15.2852C1.11123 15.3926 1.04476 15.5306 1.0243 15.6789L0.00668299 23.2165C-0.023999 23.4312 0.052706 23.646 0.201002 23.7943C0.328844 23.9221 0.507822 23.9988 0.6868 23.9988C0.717482 23.9988 0.748164 23.9988 0.778846 23.9937L5.31978 23.3801C5.69819 23.329 5.9641 22.9812 5.91296 22.6028C5.86183 22.2244 5.5141 21.9585 5.13569 22.0096L1.49476 22.5005L2.20556 17.2437L7.73854 22.7767C7.86638 22.9045 8.04536 22.9812 8.22434 22.9812C8.40332 22.9812 8.5823 22.9096 8.71014 22.7767L22.4454 9.0465C23.4477 8.04422 24 6.71467 24 5.29818C24 3.8817 23.4477 2.55215 22.4454 1.55498ZM15.2198 3.24249L17.5261 5.54875L4.99251 18.0823L2.68624 15.7761L15.2198 3.24249ZM8.22945 21.3142L5.97433 19.059L18.5079 6.52546L20.763 8.78059L8.22945 21.3142ZM21.7244 7.79365L16.2068 2.27601C16.9073 1.69817 17.7818 1.38112 18.7022 1.38112C19.7505 1.38112 20.7324 1.79021 21.4738 2.52658C22.2153 3.26295 22.6193 4.24988 22.6193 5.29818C22.6193 6.22376 22.3023 7.09308 21.7244 7.79365Z' )
-					//- 		defs
-					//- 			clippath#clip0
-					//- 				path(d='M0 0H24V24H0V0Z' )
-					//- 	| Edit
 					a(href="account-settings.html").icon-button-outline
 						svg.icon(width='25', height='24', viewBox='0 0 25 24', xmlns='http://www.w3.org/2000/svg')
 							g(clip-path='url(#clip0)')
@@ -37,6 +31,7 @@ block content
 						| Account Settings
 	section#dashboard-content
 		.container
+			//- Navigation to switch between Bookmarked Exams, Colleges, and Courses. On page load only Exams is selected.
 			nav.bookmark-nav
 				h6.sub-header-03.bookmark-header Set Bookmarks to Show
 				ul.bookmark-links 
@@ -47,6 +42,7 @@ block content
 					li(data-content = "courses")
 						a.button-01(href="#BookmarkedCourses") Courses
 			.cards-group
+				//- Onload only Exams are displayed
 				+cardExam( "individual-exam.html" , "JEE Mains", "IIT Bombay", "UG", "B.Tech & B.Arch", "#download")
 				+cardExam( "individual-exam.html" , "CEED", "IIT Delhi", "PG", "M.Des", "#download")
 				+cardExam( "individual-exam.html" , "GATE", "IIT Delhi", "PG", "M.Tech", "#download")
@@ -62,6 +58,7 @@ block content
 				+cardCourse( "individual-course.html", "BCA", "Computer", "Undergraduate", "3years" )
 				+cardCourse( "individual-course.html", "B.Des - Interaction Design", "Design", "Undergraduate", "4years" )
 block js
+	//- Some javaScript specific to this page
 	script.
 		// Dashboard Bookmarks User navigation
 

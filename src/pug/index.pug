@@ -12,10 +12,13 @@ block content
   section#hero
     .container
       h2.header-02 Find the best colleges, exams and courses in India
+      //- Two search bars, one for large and small screen, you may implement using only one, but you have to update the input placeholder content for different screens
+      //- Large Screen Search Bar with longer placeholder content
       +searchBarLG("Search Exams span, Colleges, Courses and more")
+      //- Small Screen Search Bar with shorter placeholder content
       +searchBarLG("Search Exams & more")
-  //End Hero Section
-
+      //- The above search bars just act as button to open the search modal where actual search works
+  //- End of Hero Section
   section#counselling
     .container
       .counselling-header
@@ -26,7 +29,7 @@ block content
           We ease your biggest doubts with personalized
           counselling from our curated experts.
         button.button-primary Get Couselling
-  //End of Counselling Section
+  //- End of Counselling Section
 
   section#featured-exams
     .container
@@ -34,54 +37,57 @@ block content
         .featured-section-header-content
           h4.sub-header-01 Top Featured Exams
           p.
-            Lorem Ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore
-            et dolore magna aliqua.
+            We have listed the top 6 exams for you. These exams have been selected
+            based on our research and findings at Examkhojo.com.
+        //- Search Bar when cliked opens Full Page Search Modal
         +searchBarSM("Search Exams").featured-section-header-search-bar
       .featured-section-cards
         .cards-group
+          //- Manger will Select Top 6 Exmas
           +cardExam( "individual-exam.html" , "JEE Mains", "IIT Bombay", "UG", "B.Tech & B.Arch", "#download")
           +cardExam( "individual-exam.html" , "CEED", "IIT Delhi", "PG", "M.Des", "#download")
           +cardExam( "individual-exam.html" , "GATE", "IIT Delhi", "PG", "M.Tech", "#download")
           +cardExam( "individual-exam.html" , "JEE Mains", "IIT Bombay", "UG", "B.Tech & B.Arch", "#download")
           +cardExam( "individual-exam.html" , "CEED", "IIT Delhi", "PG", "M.Des", "#download")
           +cardExam( "individual-exam.html" , "GATE", "IIT Delhi", "PG", "M.Tech", "#download")
-  //End of Featured Exams Section
+  //- End of Featured Exams Section
   section#featured-colleges
     .container
       .featured-section-header
         .featured-section-header-content
           h4.sub-header-01 Top Featured Colleges
           p.
-            Lorem Ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore
-            et dolore magna aliqua.
+            We have listed the top 6 colleges for you. These colleges have been selected
+            based on our research and findings at Examkhojo.com.
+        //- Search Bar when cliked opens Full Page Search Modal
         +searchBarSM("Search Colleges").featured-section-header-search-bar
       .featured-section-cards
         .cards-group
+          //- Manger will Select Top 6 Colleges
           +cardCollege( "individual-college.html", "../assets/images/sample.jpg", "IIT Delhi", "Delhi", "AICTE", "University", "#download" )
           +cardCollege( "individual-college.html" , "../assets/images/sample.jpg", "IEM Saltlake", "Kolkata", "AICTE", "College", "#download" )
           +cardCollege( "individual-college.html" , "../assets/images/sample.jpg", "Amity University", "Kolkata", "UGC", "University", "#download")
           +cardCollege( "individual-college.html", "../assets/images/sample.jpg", "IIT Delhi", "Delhi", "AICTE", "University", "#download" )
           +cardCollege( "individual-college.html" , "../assets/images/sample.jpg", "IEM Saltlake", "Kolkata", "AICTE", "College", "#download" )
           +cardCollege( "individual-college.html" , "../assets/images/sample.jpg", "Amity University", "Kolkata", "UGC", "University", "#download")
-  //End of Featured Colleges Section        
+  //- End of Featured Colleges Section        
   section#featured-courses
     .container
       .featured-section-header
         .featured-section-header-content
           h4.sub-header-01 Top Featured Colleges
           p.
-            Lorem Ipsum dolor sit amet, consectetur adipiscing
-            elit, sed do eiusmod tempor incididunt ut labore
-            et dolore magna aliqua.
+            We have listed the top 6 courses for you. These courses have been selected
+            based on our research and findings at Examkhojo.com.
+        //- Search Bar when cliked opens Full Page Search Modal
         +searchBarSM("Search Colleges").featured-section-header-search-bar
       .featured-section-cards
         .cards-group
+          //- Manger will Select Top 6 Colleges
           +cardCourse( "individual-college.html", "B.Tech - CSE", "Engineering", "Undergraduate", "4years" )
           +cardCourse( "individual-college.html", "B.Des - Interaction Design", "Design", "Undergraduate", "4years" )
           +cardCourse( "individual-college.html", "BCA", "Computer", "Undergraduate", "3years" )
           +cardCourse( "individual-college.html", "B.Des - Interaction Design", "Design", "Undergraduate", "4years" )
           +cardCourse( "individual-college.html", "B.Tech - CSE", "Engineering", "Undergraduate", "4years" )
           +cardCourse( "individual-college.html", "MBA", "Business", "Postgraduate", "2years" )
-  //End of Featured Courses Section
+  //- End of Featured Courses Section

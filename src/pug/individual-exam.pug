@@ -18,6 +18,9 @@ block content
 					a(href="colleges.html") Colleges
 				li.link-01 JEE Mains
 			.header-primary-info
+				//- This will be combination of Full Name and Short Name
+				//- Full Name is "Joint Entrance Exam Mains"
+				//- Short Name is "JEE Mains", this name will be used in the individual page title, cards, sidebar etc
 				h3.header-03 Joint Entrance Exams Mains (JEE Mains)
 			.header-buttons
 				button.icon-button-primary 
@@ -34,6 +37,7 @@ block content
 							clippath#clip0
 								path(d='M0.0385742 0H24.0386V23.52H0.0385742V0Z' )
 					| Download Brochure
+				//- This will take to the application website, which will be provided by the manager
 				button.icon-button-outline
 					svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
 						g(clip-path='url(#clip0)')
@@ -50,23 +54,23 @@ block content
 					h4.sub-header-01.quick-facts_header Quick Facts
 					.quick-facts_content
 						.quick-facts_content-item
-							span.label-01 Ownership
-							p.paragraph-01 Private 
-						.quick-facts_content-item.conducting-body
-							span.label-01 Approval
-							p.paragraph-01 AICTE
-						.quick-facts_content-item.official-website
-							span.label-01 Type of Institute
-							p.paragraph-01 Graduation College
-						.quick-facts_content-item.tentative-date
-							span.label-01 Established
-							p.paragraph-01 1990
-						.quick-facts_content-item.basic-eligibility
-							span.label-01 Also Known As
-							p.paragraph-01 IEM Kolkata
-						.quick-facts_content-item.basic-eligibility
-							span.label-01 Accepted Exams
-							p.paragraph-01 WBJEE, JEE(Mains)
+							span.label-01 Exam Level
+							p.paragraph-01 National 
+						.quick-facts_content-item
+							span.label-01 Conducting Body
+							p.paragraph-01 NTA
+						.quick-facts_content-item
+							span.label-01 Official Website
+							//- Official website is not always same as application website, and generally doesn't change every year
+							p.paragraph-01
+								a(href="http://jee.com") jee.com
+						.quick-facts_content-item
+							span.label-01 Tentative Date
+							p.paragraph-01 22 Jan 2020
+						.quick-facts_content-item
+							span.label-01 Basic Eligibility
+							p.paragraph-01 HS Graduation
+
 				.main-content-cta
 					h5.sub-header-02 Interested in taking this Exam?
 					button.icon-button-primary
@@ -97,6 +101,7 @@ block content
 							aliquip ex ea commodo consequat. Duis aute irure 
 							dolor in reprehenderit in voluptate velit esse 
 							cillum dolore eu fugiat nulla pariatur.
+					//- Read more button will show if the content too long
 					button.icon-link.main-content-card-button
 						svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
 							path(d='M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z')
@@ -256,7 +261,7 @@ block content
 						span.link-primary_lined Read More
 
 
-					
+			//- A sidebar for quick links to the top Exams
 			aside.card_sidebar
 				.card_sidebar-suggestion
 					h4.sub-header-01 Popular Exams
@@ -266,4 +271,5 @@ block content
 					a(href="individual-college.html").paragraph-01 GATE
 					a(href="individual-college.html").paragraph-01 CAT
 					a(href="individual-college.html").paragraph-01 NEET UG
+				//- On click the same Search Modal is Opened
 				+searchBarSM("Search Items")
