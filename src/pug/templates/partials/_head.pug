@@ -5,8 +5,10 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
 
-    meta(name="description", content="Find the best colleges, exams and courses in India")
-    meta(name="keywords", content="Collges,Exams,Courses,India,Colleges in India,Exams in India,Courses in India")
+    //The 3 tags below will be added by the manager for each page
+    block title
+
+    //Rest of the meta tags maybe made manager editable in later versions
     meta(property="og:title" content="Examkhojo, A Search Platform")
     meta(property="og:description" content="Find the best colleges, exams and courses in India")
     meta(property="og:image" content="https://raw.githubusercontent.com/GaziTaufiqIslam/examkhojo-ui/master/src/assets/images/og_img.jpg")
@@ -15,7 +17,10 @@ html(lang="en")
 
     meta(name="theme-color" content="#1a3348")
 
-    block title
+    // Common CSS file for every page
     link(rel="stylesheet" href="assets/css/app.css")
+    
+    // Individual CSS file for each page
     block stylesheet
+
     link(rel="icon", href="assets/images/favicon.ico", type="image/x-icon")

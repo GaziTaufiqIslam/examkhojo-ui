@@ -215,9 +215,17 @@
             @include size(22px)
     span
         color: $grey-04
+    .chevron-button
+        padding: 4px 8px
+        .icon
+            position: relative
+            transform: rotate(0deg)
+            @include transition (150ms)
+    .button-rotate
+        .icon
+            transform: rotate(-180deg)
     .icon
         @include size(24px)
-        padding-left: 8px
         fill: $grey-03
         cursor: pointer
     .user-dropdown

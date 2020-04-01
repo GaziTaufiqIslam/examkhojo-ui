@@ -1,41 +1,50 @@
-import axios from 'axios';
-import bouncer from 'formbouncerjs';
+import bouncer from 'formbouncerjs'; //Importing Bouncer.js
 
+// All form client-side validation using Bouncer.js
 var formValidate = new bouncer('[data-validate]');
 
-/* window.addEventListener('load', () => {
-
-  const api = 'http://www.colr.org/json/color/random';
-  const body = document.querySelector('body');
-
-  function randomColor() {
-    axios.get(api).then(res => {
-      let color = res.data.colors[0].hex;
-
-      if (!color) {
-        console.error('Random color could not be fetched.');
+// Special mime type and size validation for profile image of the user, also using Bouncer.js
+var validate = new bouncer('.form-upload-picture', {
+	customValidations: {
+		isHello: function (field) {
+      var fileType = field.files[0].size / 1024 / 1024 ; // Getting file size in MB
+      var fileSize = field.files[0].type; // Getting file type(requires polyfill)
+      if ((fileSize > 1)) return true; 
+      else {
+        switch(fileType){
+          case 'image/jpeg':
+            return false;
+            break;
+          case 'image/png':
+            return false;
+            break;
+          case 'image/gif':
+            return false;
+            break;
+          default:
+            return true;
+        }
       }
+		}
+	},
+	messages: {
+		// As a string
+		isHello: 'Use correct image format and size',
 
-      color = '#' + color;
-
-      body.style.backgroundColor = color;
-    }).catch(() => console.error('Random color could not be fetched.'));
-  }
-
-  randomColor();
-
-  setInterval(randomColor, 8000);
-
+		// As a function
+		isHello: function () {
+			return 'Use correct image format and size';
+		}
+	}
 });
 
-*/
-
-
 // User Dashboard/Log In Dropwon Toggle
-var toggleButton = document.querySelector(".toggle-button");
+var toggleButton = document.querySelector(".nav-content-links__user");
 var dropdown = document.querySelector(".user-dropdown");
+var toggleIcon = document.querySelector(".chevron-button");
 function toggleDropdown() {
   dropdown.classList.toggle('visible');
+  toggleIcon.classList.toggle('button-rotate');
 }
 toggleButton.addEventListener("click", toggleDropdown);
 
