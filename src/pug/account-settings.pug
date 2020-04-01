@@ -34,8 +34,8 @@ block content
 							</svg>
 							| Delete Picture
 						button.button-primary Upload New Picture
-						form(data-validate).form-upload-picture(action="", post="")
-							label(for = "avatar" ) JPG, GIF or PNG. Max size of 800K
+						form.form-upload-picture(data-validate, action="", post="")
+							label(for = "avatar" ) JPG, GIF or PNG. Max size of 1MB
 							input(type = "file", name="avatar" required)
 							button.icon-button-primary(type="submit")
 								<svg class="icon",width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -57,8 +57,8 @@ block content
 						label(for="email") Your Email Address
 						input( required type='email', autocomplete="username", name='email', value="amittrivedi@example.com", placeholder='Type your Email')
 					.form-element
-						label(for="phone") Your Phone Number
-
+						label.nested-label(for="phone") Your Phone Number
+							span.label-01 10 Digits Only
 						span.phone-input(data-code="+91")
 							input(type='text', name='phone', value="", placeholder='Your 10-digit Phone Number', minlength="10", maxlength="10", pattern="[0-9]{10}" )
 					.form-element
@@ -101,6 +101,14 @@ block content
 					button.button-primary No, Go back
 block js
 	script.
+		
+		//File MIME check
+		var fileInput = document.querySelector('.form-upload-picture input');
+		
+		fileInput.addEventListener('change' , function() {
+			console.log(this.files);
+		});
+
 		//Delete Account
 		var deleteModalOpenButton = document.querySelector("#account .close-account .button-primary_danger");
 		var deleteModal = document.querySelector("#account .close-account .delete-confirmation-modal");

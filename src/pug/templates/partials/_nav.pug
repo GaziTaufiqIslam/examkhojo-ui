@@ -1,4 +1,8 @@
-nav.primary-navbar.above-the-fold
+// Navbar Start here\
+// the class .above-the-fold will be toggled based on scroll to create the animation
+// the class .logged-in can be toggled if user logs in to change the navbar to show user dashboard links
+
+nav.primary-navbar.above-the-fold.logged-in
     .nav-content
         a(href="index.html").nav-content-brand
         .nav-content-links
@@ -33,7 +37,7 @@ nav.primary-navbar.above-the-fold
             .nav-content-links__user
                 img.user-avatar(src="https://ui-avatars.com/api/?format=svg&name=Drady+jules", alt="")
                 span.label-02 Drady
-                .toggle-button
+                .chevron-button
                     svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
                         path(d='M11.9995 16.8175L2.74133 7.37419C2.51364 7.14195 2.14847 7.14195 1.92077 7.37419C1.69308 7.60644 1.69308 7.97892 1.92077 8.21117L11.5914 18.0752C11.8191 18.3075 12.1843 18.3075 12.412 18.0752L22.0783 8.21117C22.19 8.09723 22.2501 7.94386 22.2501 7.79487C22.2501 7.64588 22.1943 7.49251 22.0783 7.37858C21.8506 7.14633 21.4854 7.14633 21.2577 7.37858L11.9995 16.8175Z')
                 .user-dropdown
@@ -46,3 +50,4 @@ nav.primary-navbar.above-the-fold
                     path(d='M0 4.51197C0 4.14083 0.300865 3.83997 0.672 3.83997H23.328C23.6991 3.83997 24 4.14083 24 4.51197C24 4.8831 23.6991 5.18397 23.328 5.18397H0.672C0.300865 5.18397 0 4.8831 0 4.51197Z')
                     path(d='M0 12.192C0 11.8208 0.300865 11.52 0.672 11.52H23.328C23.6991 11.52 24 11.8208 24 12.192C24 12.5631 23.6991 12.864 23.328 12.864H0.672C0.300865 12.864 0 12.5631 0 12.192Z')
                     path(d='M0.672 19.2C0.300865 19.2 0 19.5008 0 19.872C0 20.2431 0.300865 20.544 0.672 20.544H23.328C23.6991 20.544 24 20.2431 24 19.872C24 19.5008 23.6991 19.2 23.328 19.2H0.672Z')
+// Navbar Ends here
