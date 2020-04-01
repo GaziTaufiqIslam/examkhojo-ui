@@ -1,20 +1,28 @@
+//- Register Modal Start here
 .register-modal
+
+    //- Log In Modal
     .register-modal_login
       .modal-left
         .container
           .modal-left-header
             h3.header-03 Welcome Back
             h5.sub-header-02 Log In
+
+          //- Modal change to Sign up, Only on Small Screens
           .mobile_modal-switcher
             p.link-01 Don't Have an Account?
               a(href="#signup").link-primary#signUpButton Sign Up
-          form(data-validate).form-signup
+
+          //- Log In Form
+          form(data-validate action="" method="").form-signup
             .form-element
               label(for='email') Email
               input(type='email' autocomplete="username", name='email', placeholder='Type your Email')
             .form-element
               label(for='password') Password
               input(type='password' autocomplete="current-password", name='password', placeholder='Type your Password')
+              //- Small Icon to toggle password visibility
               .eye-icon
                 svg.icon#pwd-hide(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
                   path(fill-rule='evenodd', clip-rule='evenodd', d='M19.7908 19.222L3.20923 5.99135L4.14478 4.81885L20.7264 18.0495L19.7908 19.222Z' )
@@ -29,6 +37,8 @@
             .form-element
               input.button-outline(type='submit', value='Log In')
           span.divider-line
+
+          //- Login through Social Media
           .social-logins
             button.icon-button-outline
               svg.icon(width='24', height='24', viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
@@ -42,6 +52,7 @@
                 path(d='M23.52 12C23.52 5.63766 18.3623 0.47998 12 0.47998C5.63766 0.47998 0.47998 5.63766 0.47998 12C0.47998 17.7499 4.69266 22.5158 10.2 23.38V15.33H7.27498V12H10.2V9.46198C10.2 6.57478 11.9199 4.97998 14.5513 4.97998C15.8113 4.97998 17.13 5.20498 17.13 5.20498V8.03998H15.6774C14.2464 8.03998 13.8 8.92806 13.8 9.83998V12H16.995L16.4842 15.33H13.8V23.38C19.3073 22.5158 23.52 17.7499 23.52 12Z', fill='#1877F2')
                 path(d='M16.4842 15.33L16.9949 12H13.7999V9.83998C13.7999 8.92896 14.2463 8.03998 15.6773 8.03998H17.1299V5.20498C17.1299 5.20498 15.8116 4.97998 14.5512 4.97998C11.9198 4.97998 10.1999 6.57478 10.1999 9.46198V12H7.2749V15.33H10.1999V23.38C11.3926 23.5666 12.6072 23.5666 13.7999 23.38V15.33H16.4842Z', fill='white')
               | Continue with Facebook
+      //- Modal Switcher only for large screens
       .modal-right
         h4.sub-header-01 Don’t Have an Account?
         p.paragraph-01 Sign up to stay updated with the latest details
@@ -50,16 +61,21 @@
         svg.icon(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
           path(d='M20.4848 3.51515C18.2172 1.24747 15.2071 0 12 0C8.79293 0 5.78283 1.24747 3.51515 3.51515C1.24747 5.78283 0 8.79293 0 12C0 15.2071 1.24747 18.2172 3.51515 20.4848C5.78283 22.7525 8.79293 24 12 24C15.2071 24 18.2172 22.7525 20.4848 20.4848C22.7525 18.2172 24 15.2071 24 12C24 8.79293 22.7525 5.78283 20.4848 3.51515ZM19.5202 19.5202C17.5101 21.5303 14.8384 22.6364 12 22.6364C9.16162 22.6364 6.4899 21.5303 4.4798 19.5202C0.333333 15.3737 0.333333 8.62626 4.4798 4.4798C6.4899 2.4697 9.16162 1.36364 12 1.36364C14.8384 1.36364 17.5101 2.4697 19.5202 4.4798C23.6667 8.62626 23.6667 15.3737 19.5202 19.5202Z' )
           path(d='M17.2878 6.71211C17.0201 6.44443 16.5908 6.44443 16.3231 6.71211L11.9999 11.0353L7.67664 6.71211C7.40896 6.44443 6.97967 6.44443 6.71199 6.71211C6.44431 6.97979 6.44431 7.40908 6.71199 7.67676L11.0352 12L6.71199 16.3232C6.44431 16.5909 6.44431 17.0202 6.71199 17.2879C6.8433 17.4192 7.02007 17.4899 7.19179 17.4899C7.3635 17.4899 7.54027 17.4242 7.67158 17.2879L11.9948 12.9646L16.3181 17.2879C16.4494 17.4192 16.6261 17.4899 16.7979 17.4899C16.9746 17.4899 17.1463 17.4242 17.2777 17.2879C17.5453 17.0202 17.5453 16.5909 17.2777 16.3232L12.9645 12L17.2878 7.67676C17.5554 7.40908 17.5554 6.97979 17.2878 6.71211Z' )
+
+    //- Sign Up Modal 
     .register-modal_signup
       .modal-left
         .container
           .modal-left-header
             h3.header-03 Welcome to Examkhojo
             h5.sub-header-02 Sign Up
+          //- Modal Switch to log in, only on small Screens
           .mobile_modal-switcher
             p.link-01 Already Have an Account?
               a(href="#signup").link-primary#logInButton Log In
-          form(data-validate).form-signup
+
+          //- Sign Up From
+          form(action="" method="" data-validate).form-signup
             .form-element
               label(for='name') Name
               input(type='text', name='name', placeholder='Type your Name')
@@ -70,6 +86,7 @@
               label.set-password(for="new-password") 
                 | Set New Password
                 span.label-01 Please use atleast 8 characters
+              //- Icon to toggle password visibility
               .eye-icon
                 svg.icon#pwd-hide(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
                   path(fill-rule='evenodd', clip-rule='evenodd', d='M19.7908 19.222L3.20923 5.99135L4.14478 4.81885L20.7264 18.0495L19.7908 19.222Z' )
@@ -84,6 +101,7 @@
             .form-element
               input.button-outline(type='submit', value='Sign Up')
           span.divider-line
+          //- Sign up through Social Media
           .social-logins
             button.icon-button-outline
               svg.icon(width='24', height='24', viewBox='0 0 24 24', fill='none', xmlns='http://www.w3.org/2000/svg')
@@ -97,6 +115,7 @@
                 path(d='M23.52 12C23.52 5.63766 18.3623 0.47998 12 0.47998C5.63766 0.47998 0.47998 5.63766 0.47998 12C0.47998 17.7499 4.69266 22.5158 10.2 23.38V15.33H7.27498V12H10.2V9.46198C10.2 6.57478 11.9199 4.97998 14.5513 4.97998C15.8113 4.97998 17.13 5.20498 17.13 5.20498V8.03998H15.6774C14.2464 8.03998 13.8 8.92806 13.8 9.83998V12H16.995L16.4842 15.33H13.8V23.38C19.3073 22.5158 23.52 17.7499 23.52 12Z', fill='#1877F2')
                 path(d='M16.4842 15.33L16.9949 12H13.7999V9.83998C13.7999 8.92896 14.2463 8.03998 15.6773 8.03998H17.1299V5.20498C17.1299 5.20498 15.8116 4.97998 14.5512 4.97998C11.9198 4.97998 10.1999 6.57478 10.1999 9.46198V12H7.2749V15.33H10.1999V23.38C11.3926 23.5666 12.6072 23.5666 13.7999 23.38V15.33H16.4842Z', fill='white')
               | Continue with Facebook
+      //- Modal Switch to Log In, only on large screens
       .modal-right
         h4.sub-header-01 Already Have an Account?
         p.paragraph-01 Log In to access all your bookmarked items
@@ -106,3 +125,4 @@
           path(d='M20.4848 3.51515C18.2172 1.24747 15.2071 0 12 0C8.79293 0 5.78283 1.24747 3.51515 3.51515C1.24747 5.78283 0 8.79293 0 12C0 15.2071 1.24747 18.2172 3.51515 20.4848C5.78283 22.7525 8.79293 24 12 24C15.2071 24 18.2172 22.7525 20.4848 20.4848C22.7525 18.2172 24 15.2071 24 12C24 8.79293 22.7525 5.78283 20.4848 3.51515ZM19.5202 19.5202C17.5101 21.5303 14.8384 22.6364 12 22.6364C9.16162 22.6364 6.4899 21.5303 4.4798 19.5202C0.333333 15.3737 0.333333 8.62626 4.4798 4.4798C6.4899 2.4697 9.16162 1.36364 12 1.36364C14.8384 1.36364 17.5101 2.4697 19.5202 4.4798C23.6667 8.62626 23.6667 15.3737 19.5202 19.5202Z' )
           path(d='M17.2878 6.71211C17.0201 6.44443 16.5908 6.44443 16.3231 6.71211L11.9999 11.0353L7.67664 6.71211C7.40896 6.44443 6.97967 6.44443 6.71199 6.71211C6.44431 6.97979 6.44431 7.40908 6.71199 7.67676L11.0352 12L6.71199 16.3232C6.44431 16.5909 6.44431 17.0202 6.71199 17.2879C6.8433 17.4192 7.02007 17.4899 7.19179 17.4899C7.3635 17.4899 7.54027 17.4242 7.67158 17.2879L11.9948 12.9646L16.3181 17.2879C16.4494 17.4192 16.6261 17.4899 16.7979 17.4899C16.9746 17.4899 17.1463 17.4242 17.2777 17.2879C17.5453 17.0202 17.5453 16.5909 17.2777 16.3232L12.9645 12L17.2878 7.67676C17.5554 7.40908 17.5554 6.97979 17.2878 6.71211Z' )
       .modal-right
+//- Register Modal Ends Here

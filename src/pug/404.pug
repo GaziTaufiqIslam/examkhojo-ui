@@ -1,0 +1,34 @@
+extends templates/_default
+
+block title
+  title Page not Found | 404 Error | Examkhojo
+block stylesheet
+  link(rel="stylesheet" href="assets/css/pages/company.css")
+  link(rel="stylesheet" href="assets/css/pages/index.css")
+  
+block content
+  section#hero
+    .container
+      h1
+        | 404 Page Not Found
+      //- Two search bars, one for large and small screen, you may implement using only one, but you have to update the input placeholder content for different screens
+      //- Large Screen Search Bar with longer placeholder content
+      +searchBarLG("Search Exams span, Colleges, Courses and more")
+      //- Small Screen Search Bar with shorter placeholder content
+      +searchBarLG("Search Exams & more")
+  section#content
+    .container
+      h4
+        | Opps!! The page you are looking for doesn't exist
+      br
+      br
+      p.sub-header-03 Checkout these links instead :
+      p.paragraph-01
+          a(href="colleges.html") Home
+      p.paragraph-01
+          a(href="exams.html") Exams in India
+      p.paragraph-01
+          a(href="colleges.html") Top Colleges
+      p.paragraph-01
+          a(href="courses.html") Popular Courses
+  
