@@ -11,17 +11,24 @@ block stylesheet
     .container h3{
       margin-bottom: 2vh;
     }
+    #all-issues .paragraph-01{
+      margin-left: 8px
+    }
 block content
   section#hero
     .container
       h3
         | Design and Development Issues
+  section#all-issues
+    .container
+      h3  All Issues
+        span.paragraph-01
+          | (
+          a.paragraph-01(href="") Reload the page 
+          | to view new submissions)
+      <iframe class="airtable-embed" src="https://airtable.com/embed/shr0Rx6JuuzvXDRnk?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="400" style="background: transparent; border: 1px solid #ccc;"></iframe>
   section#report-issues
     .container
       h3  Report an Issue
       <iframe class="airtable-embed" src="https://airtable.com/embed/shrcyxGSNIK4hDqws?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="800" style="background: transparent; border: 1px solid #ccc;"></iframe>
-  section#all-issues
-    .container
-      h3  All Issues
-      <iframe class="airtable-embed" src="https://airtable.com/embed/shr0Rx6JuuzvXDRnk?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="400" style="background: transparent; border: 1px solid #ccc;"></iframe>
       
