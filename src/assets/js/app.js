@@ -4,39 +4,39 @@ import bouncer from 'formbouncerjs'; //Importing Bouncer.js
 var formValidate = new bouncer('[data-validate]');
 
 // Special mime type and size validation for profile image of the user, also using Bouncer.js
-var validate = new bouncer('.form-upload-picture', {
-	customValidations: {
-		isHello: function (field) {
-      var fileType = field.files[0].size / 1024 / 1024 ; // Getting file size in MB
-      var fileSize = field.files[0].type; // Getting file type(requires polyfill)
-      if ((fileSize > 1)) return true; 
-      else {
-        switch(fileType){
-          case 'image/jpeg':
-            return false;
-            break;
-          case 'image/png':
-            return false;
-            break;
-          case 'image/gif':
-            return false;
-            break;
-          default:
-            return true;
-        }
-      }
-		}
-	},
-	messages: {
-		// As a string
-		isHello: 'Use correct image format and size',
+// var validate = new bouncer('.form-upload-picture', {
+// 	customValidations: {
+// 		isHello: function (field) {
+//       var fileType = field.files[0].size / 1024 / 1024 ; // Getting file size in MB
+//       var fileSize = field.files[0].type; // Getting file type(requires polyfill)
+//       if ((fileSize > 1)) return true; 
+//       else {
+//         switch(fileType){
+//           case 'image/jpeg':
+//             return false;
+//             break;
+//           case 'image/png':
+//             return false;
+//             break;
+//           case 'image/gif':
+//             return false;
+//             break;
+//           default:
+//             return true;
+//         }
+//       }
+// 		}
+// 	},
+// 	messages: {
+// 		// As a string
+// 		isHello: 'Use correct image format and size',
 
-		// As a function
-		isHello: function () {
-			return 'Use correct image format and size';
-		}
-	}
-});
+// 		// As a function
+// 		isHello: function () {
+// 			return 'Use correct image format and size';
+// 		}
+// 	}
+// });
 
 // User Dashboard/Log In Dropwon Toggle
 var toggleButton = document.querySelector(".nav-content-links__user");

@@ -1,5 +1,6 @@
 .cards-group
     @include flex-parent
+    align-items: stretch
     justify-content: center
     flex-wrap: wrap
     margin: calc(10vmin - 12px) -12px -12px
@@ -68,6 +69,7 @@
 .card_course
     @extend .card
     @include flex-parent
+    align-items: start
     .card_course-details
         width: 100%
         padding: 32px 48px
