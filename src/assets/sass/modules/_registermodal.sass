@@ -8,15 +8,16 @@
     display: none
     .register-modal_login, .register-modal_signup
         background: $white-01
-        width: 100%
-        max-width: 1200px
-        margin: 10vmin auto
+        width: 80%
+        max-width: 1600px
+        margin: 16vh auto
         display: none
         grid-template-columns: 1fr 1fr
         position: relative
         border-radius: 10px
         overflow: hidden
         @media screen and ( max-width:  1400px)
+            width: 100%
             max-width: 960px
         @media screen and ( max-width:  1200px)
             grid-template-columns: 1fr            
@@ -34,8 +35,18 @@
         .modal-left
             padding: 48px 0
             @media screen and ( max-width:  800px)
-                padding: 10vh 0  
+                padding: 6vh 0 4vh
+            @media screen and ( max-width:  800px)
+                padding: 10vh 0
+            .container
+                width: 85% 
             .modal-left-header
+                .modal-left-header__brand
+                    img
+                        height: 32px
+                        margin-bottom: 2vh
+                        @media screen and ( max-width: 480px )
+                            height: 20px
                 .header-03
                     margin-bottom: 8px
                     @media screen and ( max-width: 1200px )
@@ -68,6 +79,9 @@
                     .icon
                         @include size(24px)
                         fill: $grey-04
+                    &:hover
+                        .icon
+                            fill: $blue-02
                 .link-01
                     color: $blue-02
                     &:hover
