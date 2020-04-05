@@ -3,6 +3,15 @@ import bouncer from 'formbouncerjs'; //Importing Bouncer.js
 // All form client-side validation using Bouncer.js
 var formValidate = new bouncer('[data-validate]');
 
+var validate = new bouncer('.form-edu-details, .form-signup', {
+	messages: {
+    wrongLength: {
+      over: "Hello",
+      under: "Password must be 8 characters long. You are currently using {length} characters"
+    }
+	}
+});
+
 // Special mime type and size validation for profile image of the user, also using Bouncer.js
 // var validate = new bouncer('.form-upload-picture', {
 // 	customValidations: {
@@ -167,7 +176,6 @@ var registerModal = document.querySelector(".register-modal");
 var logInModal = registerModal.querySelector(".register-modal_login");
 var signUpModal = registerModal.querySelector(".register-modal_signup");
 
-var modalOverlay = document.querySelector(".modal-overlay");
 var closeRegisterModal = document.querySelectorAll(".close-register-modal");
 
 Object.entries(logInButton).map((object) => {
@@ -211,7 +219,10 @@ var passwordInput = document.querySelectorAll('input[type="password"]');
 
 Object.entries(eyeIconHide).map((object) => {
   object[1].onclick = function() {
-    object[1].style.display = "none";
+    object[1].style.display = "none"; 
+    for (var i = 0; i<eyeIconHide.length; i++) {
+      eyeIconHide[i].style.display = "none"; 
+    }
 
     Object.entries(passwordInput).map((object) => {
       if (object[1].type === "password") {
@@ -230,6 +241,9 @@ Object.entries(eyeIconHide).map((object) => {
 Object.entries(eyeIconShow).map((object) => {
   object[1].onclick = function() {
     object[1].style.display = "none";
+    for (var i = 0; i<eyeIconShow.length; i++) {
+      eyeIconShow[i].style.display = "none"; 
+    }
 
     Object.entries(passwordInput).map((object) => {
       if (object[1].type === "password") {

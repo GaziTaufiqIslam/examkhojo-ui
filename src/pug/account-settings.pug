@@ -82,12 +82,12 @@ block content
 				form(data-validate).form-edu-details
 					.form-element
 						label(for="password") Your Old/Current Password
-						input( required type='password', name='password', placeholder='Type your Old Password')
+						input( required type='password', autocomplete="password", name='password', placeholder='Type your Old Password')
 					.form-element
 						label.set-password(for="new-password") 
 							| Set New Password
 							span.label-01 Please use atleast 8 characters
-						input( required type='password', autocomplete="new-password", name='new-password', placeholder='Type your New Password')
+						input(data-bouncer-message="Hi", type='password', autocomplete="new-password", name='new-password', minlength="8", placeholder='Type your Password' required)
 					.form-element
 						input.button-primary(type="submit" value="Update Password")
 		.close-account
