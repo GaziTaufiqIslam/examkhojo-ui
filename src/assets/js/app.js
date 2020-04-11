@@ -178,6 +178,16 @@ var signUpModal = registerModal.querySelector(".register-modal_signup");
 
 var closeRegisterModal = document.querySelectorAll(".close-register-modal");
 
+var getCounsellingButton = document.querySelectorAll("#counselling button");
+
+Object.entries(getCounsellingButton).map((object) => {
+  object[1].onclick = function() {
+    registerModal.style.display= "block";
+    signUpModal.style.display= "none";
+    logInModal.style.display= "grid";
+  };
+});
+
 Object.entries(logInButton).map((object) => {
   object[1].onclick = function() {
     // alert("Log In Clicked");
@@ -190,7 +200,6 @@ Object.entries(logInButton).map((object) => {
 
 Object.entries(signUpButton).map((object) => {
   object[1].onclick = function() {
-    // alert("Sign Up Clicked");
     registerModal.style.display= "block";
     logInModal.style.display= "none";
     signUpModal.style.display= "grid";
@@ -200,7 +209,6 @@ Object.entries(signUpButton).map((object) => {
 
 Object.entries(closeRegisterModal).map((object) => {
   object[1].onclick = function() {
-    // alert("Sign Up Clicked");
     registerModal.style.display= "none";
 
   };
@@ -210,6 +218,9 @@ window.onclick = function(event) {
   if(event.target == registerModal)
   registerModal.style.display = "none";
 };
+
+
+
 
 
 //Password Visisbility
