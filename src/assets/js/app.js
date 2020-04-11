@@ -179,18 +179,31 @@ var signUpModal = registerModal.querySelector(".register-modal_signup");
 var closeRegisterModal = document.querySelectorAll(".close-register-modal");
 
 var getCounsellingButton = document.querySelectorAll("#counselling button");
-
+var counsellingConfirmation = document.querySelector("#counselling .counselling-confirmation")
+// Not logged in
 Object.entries(getCounsellingButton).map((object) => {
   object[1].onclick = function() {
-    registerModal.style.display= "block";
-    signUpModal.style.display= "none";
-    logInModal.style.display= "grid";
+
+    if(navbar.classList.contains("logged-in"))
+      counsellingConfirmation.style.display = "flex";
+    else{
+      registerModal.style.display= "block";
+      signUpModal.style.display= "none";
+      logInModal.style.display= "grid";
+
+    }
+
   };
 });
 
+// window.onclick = function(event) {
+//   if(event.target == counsellingConfirmation)
+//   counsellingConfirmation.style.display = "none";
+// };
+
+
 Object.entries(logInButton).map((object) => {
   object[1].onclick = function() {
-    // alert("Log In Clicked");
     registerModal.style.display= "block";
     signUpModal.style.display= "none";
     logInModal.style.display= "grid";
@@ -217,6 +230,8 @@ Object.entries(closeRegisterModal).map((object) => {
 window.onclick = function(event) {
   if(event.target == registerModal)
   registerModal.style.display = "none";
+  if(event.target == counsellingConfirmation)
+  counsellingConfirmation.style.display = "none";
 };
 
 

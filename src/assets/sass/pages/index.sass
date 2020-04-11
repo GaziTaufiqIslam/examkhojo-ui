@@ -39,6 +39,40 @@ body
   .counselling-content
     p
       margin: 24px 0 32px
+  .counselling-confirmation
+    display: none
+    position: fixed
+    background: transparentize($black-01, 0.7)
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    z-index: 500
+    .counselling-confirmation-message
+      margin: auto
+      width: 90%
+      max-width: 800px
+      background: $white-01
+      padding: 36px 5%
+      .icon
+        @include size(30px)
+        fill: $success-green
+        margin-right: 8px
+        height: 38px
+        @media screen and ( max-width: 480px )
+          @include size(20px)
+          height: 28px
+      h5, p
+        margin-bottom: 24px
+      h5
+        text-align: center
+    .message-tip
+      font-size: 0.75rem
+      color: $white-02
+      background: $blue-02
+      padding: 4px
+      margin-right: 4px
+      border-radius: 5px
 
 .featured-section
   padding: 12vmin 0
