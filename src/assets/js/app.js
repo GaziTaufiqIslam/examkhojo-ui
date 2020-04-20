@@ -242,12 +242,18 @@ var allResourceButtons = [cardBrochureDownloadButtons, pageHeaderResourceButtons
 for(var i = 0; i < allResourceButtons.length; i++ ){
   Object.entries(allResourceButtons[i]).map((object) =>{
     object[1].onclick = function(e) {
+      if(navbar.classList.contains("logged-in"))
+      return true;
+    else{
       e.preventDefault();
       registerModal.style.display= "block";
       signUpModal.style.display= "none";
       logInModal.style.display= "grid";
+    }
     };
   });
+
+
 }
 
 //Password Visisbility
