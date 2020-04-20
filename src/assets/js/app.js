@@ -180,7 +180,7 @@ var closeRegisterModal = document.querySelectorAll(".close-register-modal");
 
 var getCounsellingButton = document.querySelectorAll("#counselling button");
 var counsellingConfirmation = document.querySelector("#counselling .counselling-confirmation")
-// Not logged in
+
 Object.entries(getCounsellingButton).map((object) => {
   object[1].onclick = function() {
 
