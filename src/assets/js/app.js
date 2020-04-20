@@ -234,9 +234,21 @@ window.onclick = function(event) {
   counsellingConfirmation.style.display = "none";
 };
 
-
-
-
+// Log In prompt for Resource Buttons i.e. Brochures, Bookmark, Apply to College etc
+var cardBrochureDownloadButtons = document.querySelectorAll('.card_college .link-primary_lined, .card_exam .link-primary_lined, .card_course .link-primary_lined');
+var pageHeaderResourceButtons = document.querySelectorAll('.header-buttons button');
+var pageContentResourceButtons = document.querySelectorAll('.main-content-cta button');
+var allResourceButtons = [cardBrochureDownloadButtons, pageHeaderResourceButtons, pageContentResourceButtons]
+for(var i = 0; i < allResourceButtons.length; i++ ){
+  Object.entries(allResourceButtons[i]).map((object) =>{
+    object[1].onclick = function(e) {
+      e.preventDefault();
+      registerModal.style.display= "block";
+      signUpModal.style.display= "none";
+      logInModal.style.display= "grid";
+    };
+  });
+}
 
 //Password Visisbility
 var eyeIconHide = document.querySelectorAll("#pwd-hide");
