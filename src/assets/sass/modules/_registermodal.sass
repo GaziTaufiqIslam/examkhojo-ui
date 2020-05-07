@@ -16,7 +16,10 @@
         position: relative
         border-radius: 10px
         overflow: hidden
+        @media screen and ( max-width:  1600px)
+            margin: 10vh auto
         @media screen and ( max-width:  1400px)
+            margin: 4vh auto
             width: 100%
             max-width: 960px
         @media screen and ( max-width:  1200px)
@@ -34,6 +37,10 @@
 
         .modal-left
             padding: 48px 0
+            @media screen and ( max-width:  1400px)
+                padding: 24px 0 36px
+            @media screen and ( max-width:  1200px)
+                padding: 32px 0
             @media screen and ( max-width:  800px)
                 padding: 6vh 0 4vh
             @media screen and ( max-width:  800px)
@@ -60,7 +67,7 @@
                         margin-left: 4px
             form
                 margin: 48px auto
-                @media screen and ( max-width: 1000px )
+                @media screen and ( max-width: 1400px )
                     margin: 24px auto 32px
                 .form-element
                     margin-bottom: 16px
@@ -94,6 +101,8 @@
                 height: 1px
                 background-color: $grey-02
                 margin: 32px auto
+                @media screen and ( max-width: 1400px )
+                    margin-bottom: 16px
             .social-logins
                 @include flex-parent
                 flex-direction: column

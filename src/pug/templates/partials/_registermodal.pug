@@ -8,8 +8,8 @@
           .modal-left-header
             a(href="index.html").modal-left-header__brand
               img(src="assets/images/logo-main.png", alt="Examkhojo Main Logo")
-            h3.header-03 Welcome Back
-            h5.sub-header-02 Log In
+            h4.sub-header-01 Welcome Back
+            h6.sub-header-03 Log In
 
           //- Modal change to Sign up, Only on Small Screens
           .mobile_modal-switcher
@@ -37,7 +37,7 @@
               input(type='password' autocomplete="current-password", name='password', placeholder='Type your Password' required)
               a.link-01(href="forgot-password.html") Forgot Your Password?
             .form-element
-              input.button-outline(type='submit', value='Log In')
+              button.button-primary(type='submit') Log In
           span.divider-line
 
           //- Login through Social Media
@@ -69,8 +69,8 @@
       .modal-left
         .container
           .modal-left-header
-            h3.header-03 Welcome to Examkhojo
-            h5.sub-header-02 Sign Up
+            h4.sub-header-01 Welcome to Examkhojo
+            h6.sub-header-03 Sign Up
           //- Modal Switch to log in, only on small Screens
           .mobile_modal-switcher
             p.link-01 Already Have an Account?
@@ -86,7 +86,7 @@
               input(type='email', autocomplete="username", name='email', placeholder='Type your Email' required)
             .form-element
               label.set-password(for="new-password") 
-                | Set New Password
+                | Set Password
                 span.label-01 Please use atleast 8 characters
               //- Icon to toggle password visibility
               .eye-icon
@@ -103,8 +103,8 @@
             .form-element
               p.agree-terms.label-01
                 | By signing up you agree to our 
-                a.label-01(href="terms.html") Terms and Conditions
-              input.button-outline(type='submit', value='Sign Up')
+                a.label-01.link-01(href="terms.html") Terms and Conditions
+              button.button-primary(type='submit') Sign Up
           span.divider-line
           //- Sign up through Social Media
           .social-logins
